@@ -1,10 +1,33 @@
+---
+const navLinks = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "About",
+    href: "/about",
+  },
+  {
+    label: "Adorables",
+    href: "/adorables",
+  },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
 <header>
-    <a class="header-title" href="/"><h1>Addie's Adorables</h1></a>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/adorables">Adorables</a></li>
-            <li><a href="/about">About</a></li>
-        </ul>
-    </nav>
+  <a class="header-title" href="/"><h1>Addie's Adorables</h1></a>
+  <nav>
+    <ul>
+      {
+        navLinks.map((link) => (
+          <li aria-current={currentPath === link.href ? "page" : undefined}>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
 </header>

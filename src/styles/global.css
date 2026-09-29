@@ -42,7 +42,7 @@ main {
 .hero {
     background-color: var(--color-primary-light);
     padding: 20px;
-    min-height: 300px;
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,6 +52,7 @@ main {
 .hero-home {
     align-items: center;
     text-align: center;
+    min-height: 300px;
 }
 
 .content-section {

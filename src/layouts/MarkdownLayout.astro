@@ -1,13 +1,15 @@
 ---
 import PageLayout from './PageLayout.astro';
 import ContentSection from '../components/ContentSection.astro';
+import Hero from '../components/Hero.astro';
 import '../styles/variables.css';
 import '../styles/global.css';
 
 const { frontmatter } = Astro.props;
 ---
 
-<PageLayout pageTitle={frontmatter.pageTitle} heroTitle={frontmatter.heroTitle} subTitle={frontmatter.subTitle}>
+<PageLayout pageTitle={frontmatter.pageTitle}>
+    <Hero title={frontmatter.title} subTitle={frontmatter.subTitle} />
     <ContentSection heading={frontmatter.title}>
         <slot />
     </ContentSection>
