@@ -1,12 +1,12 @@
 :root {
-    --color-primary-accent: #EBBFC4;          /* 🌸 Dusty Pink */
-    --color-primary-light: #FFE4E8;
-    --color-secondary-accent: #C7B3DD;        /* 💜 Soft Lavender */
-    --color-secondary-dark: #5e46a5;
-    --color-supporting-accent: #C0A6C9;       /* 🪻 Muted Purple */
-    --color-natural-accent: #A7C5AE;          /* 🌿 Sage Green */
-    --color-highlight: #FBE389;               /* 🌼 Soft Butter Yellow */
-    --color-background: #F7EBE0;              /* 🥛 Warm Cream */
+    --color-ink: #263a55;
+    --color-primary-accent: #d98c9b;
+    --color-primary-light: #faeeee;
+    --color-secondary-accent: #b8c3d4;
+    --color-supporting-accent: #a8b9a7;
+    --color-highlight: #f5d989;
+    --color-background: #fffdfb;
+
     --font-heading: "Fredoka", sans-serif;
     --font-body: "Nunito Sans", sans-serif;
 }
