@@ -2,7 +2,6 @@
 pageTitle: Template Adorable
 heroTitle: Template
 layout: ../../layouts/MarkdownLayout.astro
-image: ../assets/adorables/template.png
 ---
 Price: $100000000.00
 
