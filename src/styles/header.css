@@ -28,7 +28,7 @@ nav a {
     position: relative;
     display: inline-block;
     padding: 3px 0;
-    color: var(--color-secondary-dark);
+    color: var(--color-ink);
     font-weight: 600;
     text-decoration: none;
 }
@@ -39,7 +39,7 @@ nav a::after {
     bottom: 0;
     left: 0;
     height: 2px;
-    background-color: var(--color-secondary-dark);
+    background-color: var(--color-ink);
     border-radius: 999px;
     content: "";
     transform: scaleX(0);

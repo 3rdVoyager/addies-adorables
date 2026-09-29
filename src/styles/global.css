@@ -4,11 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--color-secondary-dark);
 }
 
 body {
     font-family: var(--font-body);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
@@ -27,7 +29,7 @@ p {
 }
 
 a {
-    color: var(--color-secondary-dark);
+    color: var(--color-ink);
     text-decoration: none;
 }
 
@@ -37,6 +39,7 @@ li {
 
 main {
     background-color: var(--color-background);
+    flex: 1;
 }
 
 .hero {
