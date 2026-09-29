@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <PageLayout pageTitle={frontmatter.pageTitle}>
-    <Hero title={frontmatter.herotitle} subTitle={frontmatter.subTitle} />
+    <Hero title={frontmatter.heroTitle} subTitle={frontmatter.subTitle} />
     <ContentSection heading={frontmatter.title}>
         <slot />
     </ContentSection>
