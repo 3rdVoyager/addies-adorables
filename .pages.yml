@@ -1,0 +1,43 @@
+media:
+  - name: adorable_images
+    label: Adorable images
+    input: public/images/adorables
+    output: /images/adorables
+
+content:
+  - name: adorables
+    label: Adorables
+    type: collection
+    path: src/pages/adorables
+    format: yaml-frontmatter
+    filename: "{pageTitle}.md"
+    exclude:
+      - index.astro
+    fields:
+      - name: pageTitle
+        label: Page title
+        type: string
+        required: true
+      - name: heroTitle
+        label: Hero title
+        type: string
+        required: true
+      - name: subTitle
+        label: Subtitle
+        type: text
+      - name: layout
+        label: Astro layout
+        type: string
+        hidden: true
+        default: ../../layouts/MarkdownLayout.astro
+      - name: image
+        label: Image
+        type: image
+        options:
+          media: adorable_images
+          rename: true
+      - name: body
+        label: Content
+        type: rich-text
+        options:
+          format: markdown
