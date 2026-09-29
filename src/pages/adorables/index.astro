@@ -1,0 +1,23 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import type { MarkdownInstance } from "astro";
+import ContentSection from '../../components/ContentSection.astro';
+import Hero from '../../components/Hero.astro';
+
+const adorables = Object.values(import.meta.glob<MarkdownInstance<AdorableFrontmatter>>("./*.md", { eager: true }));
+
+type AdorableFrontmatter = {
+  pageTitle: string;
+};
+---
+
+<PageLayout pageTitle="Adorables">
+  <Hero title="Adorables" subTitle="This is the adorables page." />
+  <ContentSection heading="Adorables">
+  <ul>
+    {adorables.map((adorable) => (
+        <li><a href={adorable.url}>{adorable.frontmatter.pageTitle}</a></li>
+    ))}
+  </ul>
+  </ContentSection>
+</PageLayout>
