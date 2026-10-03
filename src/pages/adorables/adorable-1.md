@@ -1,7 +1,7 @@
 ---
-pageTitle: Adorable 1
-heroTitle: Adorable 1
-subTitle: Blah
+pageTitle: Horse Keychain
+heroTitle: Horse Keychain
+subTitle: Buh
 layout: ../../layouts/MarkdownLayout.astro
 ---
-blah
+The perfect little companion on any bag! $5
