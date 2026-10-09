@@ -1,7 +1,7 @@
 ---
 pageTitle: Horse Keychain
 heroTitle: Horse Keychain
-subTitle: Blah
+subTitle: Buh
 layout: ../../layouts/MarkdownLayout.astro
 ---
 The perfect little companion on any bag!
