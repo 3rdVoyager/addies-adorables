@@ -1,0 +1,7 @@
+---
+const { title, type = "" } = Astro.props;
+---
+<div class={`content-block content-block-${type}`}>
+  {title && <h3>{title}</h3>}
+  <slot />
+</div>

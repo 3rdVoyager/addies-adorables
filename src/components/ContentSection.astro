@@ -1,7 +1,7 @@
 ---
-const { heading } = Astro.props;
+const { title, columns = "" } = Astro.props;
 ---
-<section class="content-section">
-    <h2>{heading}</h2>
+<section class={`content-section content-section-${columns}`}>
+    {title && <h2>{title}</h2>}
     <slot />
 </section>
