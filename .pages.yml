@@ -7,12 +7,8 @@ media:
 content:
   - name: adorables
     label: Adorables
-    type: collection
-    path: src/pages/adorables
-    format: yaml-frontmatter
-    filename: "{pageTitle}.md"
-    exclude:
-      - index.astro
+    type: file
+    path: src/content/pages/adorables.md
     fields:
       - name: pageTitle
         label: Page title
@@ -25,19 +21,63 @@ content:
       - name: subTitle
         label: Subtitle
         type: text
-      - name: layout
-        label: Astro layout
-        type: string
-        hidden: true
-        default: ../../layouts/MarkdownLayout.astro
-      - name: image
-        label: Image
-        type: image
-        options:
-          media: adorable_images
-          rename: true
       - name: body
         label: Content
         type: rich-text
         options:
           format: markdown
+
+  - name: header
+    label: Header
+    type: file
+    path: src/data/header.json
+    fields:
+      - name: brand
+        label: Brand
+        type: object
+        fields:
+          - name: name
+            label: Name
+            type: string
+            required: true
+          - name: mark
+            label: Brand mark
+            type: string
+            required: true
+            description: A short symbol displayed beside the brand name.
+      - name: navigation
+        label: Navigation
+        type: object
+        fields:
+          - name: navLinks
+            label: Navigation links
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.label}"
+            fields:
+              - name: label
+                label: Label
+                type: string
+                required: true
+              - name: href
+                label: Link
+                type: string
+                required: true
+          - name: ctaLinks
+            label: Call-to-action links
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.label}"
+            fields:
+              - name: label
+                label: Label
+                type: string
+                required: true
+              - name: href
+                label: Link
+                type: string
+                required: true

@@ -1,0 +1,25 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import ContentRouter from "../components/ContentRouter.astro";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+
+  return pages
+    .filter((page) => page.id !== "index")
+    .map((page) => ({
+      params: {
+        slug: page.id,
+      },
+      props: {
+        entry: page,
+      },
+    }));
+}
+
+const { entry } = Astro.props as {
+  entry: CollectionEntry<"pages">;
+};
+---
+
+<ContentRouter entry={entry} />
