@@ -11,13 +11,37 @@ interface Props {
   images?: GalleryImage[];
   size?: "small" | "medium" | "large" | "full";
   crop?: "natural" | "landscape" | "square" | "portrait";
+  controls?: boolean;
+  indicators?: boolean;
+  autoScroll?: boolean;
+  autoScrollInterval?: number;
+  pauseOnHover?: boolean;
 }
 
-const { images = [], size = "large", crop = "landscape" } = Astro.props;
+const {
+  images = [],
+  size = "large",
+  crop = "natural",
+  controls = true,
+  indicators = true,
+  autoScroll = false,
+  autoScrollInterval = 5000,
+  pauseOnHover = true,
+} = Astro.props;
 const hasMultipleImages = images.length > 1;
 ---
 
-<div class:list={["gallery", `gallery--${size}`, { "gallery--has-controls": hasMultipleImages }]} data-gallery>
+<div
+  class:list={[
+    "gallery",
+    `gallery--${size}`,
+    { "gallery--has-controls": controls && hasMultipleImages },
+  ]}
+  data-gallery
+  data-gallery-auto-scroll={autoScroll && hasMultipleImages ? "true" : "false"}
+  data-gallery-interval={autoScrollInterval}
+  data-gallery-pause-on-hover={pauseOnHover ? "true" : "false"}
+>
   <div class="gallery__viewport" tabindex="0" aria-label="Image gallery">
     <div class="gallery__track">
       {
@@ -31,7 +55,7 @@ const hasMultipleImages = images.length > 1;
   </div>
 
   {
-    hasMultipleImages && (
+    controls && hasMultipleImages && (
       <div class="gallery__controls">
         <button type="button" data-gallery-previous aria-label="Previous image">
           <span aria-hidden="true">←</span>
@@ -39,6 +63,21 @@ const hasMultipleImages = images.length > 1;
         <button type="button" data-gallery-next aria-label="Next image">
           <span aria-hidden="true">→</span>
         </button>
+      </div>
+    )
+  }
+
+  {
+    indicators && hasMultipleImages && (
+      <div class="gallery__indicators" aria-label="Choose gallery image">
+        {images.map((_, index) => (
+          <button
+            type="button"
+            data-gallery-indicator={index}
+            aria-label={`Show image ${index + 1}`}
+            aria-current={index === 0 ? "true" : undefined}
+          />
+        ))}
       </div>
     )
   }
@@ -50,19 +89,59 @@ const hasMultipleImages = images.length > 1;
     const slides = gallery.querySelectorAll<HTMLElement>(".gallery__slide");
     const previous = gallery.querySelector<HTMLButtonElement>("[data-gallery-previous]");
     const next = gallery.querySelector<HTMLButtonElement>("[data-gallery-next]");
+    const indicators = gallery.querySelectorAll<HTMLButtonElement>("[data-gallery-indicator]");
 
     if (!viewport || slides.length < 2) return;
 
     let currentIndex = 0;
+    let timer: number | undefined;
+
     const showSlide = (index: number) => {
       currentIndex = (index + slides.length) % slides.length;
       viewport.scrollTo({
         left: currentIndex * viewport.clientWidth,
         behavior: "smooth",
       });
+
+      indicators.forEach((indicator, indicatorIndex) => {
+        indicator.setAttribute(
+          "aria-current",
+          indicatorIndex === currentIndex ? "true" : "false",
+        );
+      });
+    };
+
+    const stopAutoScroll = () => {
+      if (timer !== undefined) {
+        window.clearInterval(timer);
+        timer = undefined;
+      }
+    };
+
+    const startAutoScroll = () => {
+      stopAutoScroll();
+      if (gallery.dataset.galleryAutoScroll !== "true") return;
+
+      const interval = Number(gallery.dataset.galleryInterval) || 5000;
+      timer = window.setInterval(() => showSlide(currentIndex + 1), interval);
     };
 
     previous?.addEventListener("click", () => showSlide(currentIndex - 1));
     next?.addEventListener("click", () => showSlide(currentIndex + 1));
+
+    indicators.forEach((indicator) => {
+      indicator.addEventListener("click", () => {
+        showSlide(Number(indicator.dataset.galleryIndicator));
+      });
+    });
+
+    if (gallery.dataset.galleryPauseOnHover === "true") {
+      gallery.addEventListener("mouseenter", stopAutoScroll);
+      gallery.addEventListener("mouseleave", startAutoScroll);
+      gallery.addEventListener("focusin", stopAutoScroll);
+      gallery.addEventListener("focusout", startAutoScroll);
+    }
+
+    startAutoScroll();
   });
 </script>

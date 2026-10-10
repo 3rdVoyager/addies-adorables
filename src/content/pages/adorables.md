@@ -44,20 +44,9 @@ sections:
           variant: card
           blocks:
             - type: text
-              text: "### Mini Octopi"
+              text: "### Mini Crochet Whales"
             - type: button
               button:
                 title: View
-                href: /adorables/katherines-krafts
-      - type: block
-        block:
-          color: white
-          variant: card
-          blocks:
-            - type: text
-              text: "### Mini Whales"
-            - type: button
-              button:
-                title: View
-                href: /adorables/katherines-krafts-1
+                href: /adorables/mini-crochet-whales
 ---

@@ -77,6 +77,27 @@
     background: rgb(0 0 0 / 85%);
 }
 
+.gallery__indicators {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xs);
+    margin-top: var(--space-sm);
+}
+
+.gallery__indicators button {
+    width: 0.75rem;
+    height: 0.75rem;
+    padding: 0;
+    border: 2px solid var(--color-border-dark);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.gallery__indicators button[aria-current="true"] {
+    background: var(--color-border-pink);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .gallery__viewport {
         scroll-behavior: auto;

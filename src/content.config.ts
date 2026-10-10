@@ -24,6 +24,13 @@ export type GalleryData =
   | GalleryImage[]
   | {
       images?: GalleryImage[];
+      size?: "small" | "medium" | "large" | "full";
+      crop?: "natural" | "landscape" | "square" | "portrait";
+      controls?: boolean;
+      indicators?: boolean;
+      autoScroll?: boolean;
+      autoScrollInterval?: number;
+      pauseOnHover?: boolean;
     };
 
 export type BlockGroupData = {
@@ -75,6 +82,13 @@ const gallerySchema = z.union([
   z.array(galleryImageSchema),
   z.object({
     images: z.array(galleryImageSchema).optional(),
+    size: z.enum(["small", "medium", "large", "full"]).optional(),
+    crop: z.enum(["natural", "landscape", "square", "portrait"]).optional(),
+    controls: z.boolean().optional(),
+    indicators: z.boolean().optional(),
+    autoScroll: z.boolean().optional(),
+    autoScrollInterval: z.number().optional(),
+    pauseOnHover: z.boolean().optional(),
   }),
 ]);
 

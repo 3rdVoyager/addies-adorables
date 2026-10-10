@@ -9,6 +9,23 @@ const { block } = Astro.props as { block: ContentBlockData };
 const galleryImages = Array.isArray(block.gallery)
   ? block.gallery
   : block.gallery?.images ?? [];
+const gallerySize = Array.isArray(block.gallery) ? undefined : block.gallery?.size;
+const galleryCrop = Array.isArray(block.gallery) ? undefined : block.gallery?.crop;
+const galleryControls = Array.isArray(block.gallery)
+  ? undefined
+  : block.gallery?.controls;
+const galleryIndicators = Array.isArray(block.gallery)
+  ? undefined
+  : block.gallery?.indicators;
+const galleryAutoScroll = Array.isArray(block.gallery)
+  ? undefined
+  : block.gallery?.autoScroll;
+const galleryAutoScrollInterval = Array.isArray(block.gallery)
+  ? undefined
+  : block.gallery?.autoScrollInterval;
+const galleryPauseOnHover = Array.isArray(block.gallery)
+  ? undefined
+  : block.gallery?.pauseOnHover;
 ---
 
 {block.text && <Markdown text={block.text} />}
@@ -30,4 +47,17 @@ const galleryImages = Array.isArray(block.gallery)
   />
 )}
 
-{galleryImages.length ? <Gallery images={galleryImages} /> : null}
+{
+  galleryImages.length ? (
+    <Gallery
+      images={galleryImages}
+      size={gallerySize}
+      crop={galleryCrop}
+      controls={galleryControls}
+      indicators={galleryIndicators}
+      autoScroll={galleryAutoScroll}
+      autoScrollInterval={galleryAutoScrollInterval}
+      pauseOnHover={galleryPauseOnHover}
+    />
+  ) : null
+}
