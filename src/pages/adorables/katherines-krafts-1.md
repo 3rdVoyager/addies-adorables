@@ -1,6 +1,6 @@
 ---
-pageTitle: Katherine's Krafts
-heroTitle: Mini Whales
+pageTitle: Mini Whales
+heroTitle: Katherine's Krafts
 layout: ../../layouts/MarkdownLayout.astro
 image: /images/adorables/unnamed-11.webp
 ---
