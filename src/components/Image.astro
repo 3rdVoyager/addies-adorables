@@ -1,0 +1,26 @@
+---
+import "../styles/image.css";
+
+interface Props {
+  src: string;
+  alt?: string;
+  size?: "small" | "medium" | "large" | "full";
+  crop?: "natural" | "landscape" | "square" | "portrait";
+  loading?: "eager" | "lazy";
+}
+
+const {
+  src,
+  alt = "",
+  size = "medium",
+  crop = "natural",
+  loading = "lazy",
+} = Astro.props;
+---
+
+<img
+  class={`content-image content-image--${size} content-image--${crop}`}
+  src={src}
+  alt={alt}
+  loading={loading}
+/>

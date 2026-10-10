@@ -4,28 +4,203 @@ media:
     input: public/images/adorables
     output: /images/adorables
 
-content:
-  - name: adorables
-    label: Adorables
-    type: file
-    path: src/content/pages/adorables.md
+components:
+  button:
+    type: object
+    label: Button
     fields:
-      - name: pageTitle
+      - name: title
+        label: Text
+        type: string
+        required: true
+      - name: href
+        label: Link
+        type: string
+        required: true
+      - name: type
+        label: Style
+        type: select
+        default: primary
+        options:
+          values: [primary, secondary]
+
+  gallery:
+    type: object
+    label: Gallery
+    fields:
+      - name: images
+        label: Gallery images
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Image {index}"
+        fields:
+          - name: src
+            label: Image file
+            type: image
+            required: true
+            options:
+              media: adorable_images
+          - name: alt
+            label: Accessibility text
+            type: string
+
+  image:
+    type: object
+    label: Image
+    fields:
+      - name: src
+        label: Image file
+        type: image
+        required: true
+        options:
+          media: adorable_images
+      - name: alt
+        label: Accessibility text
+        type: string
+      - name: size
+        label: Display size
+        type: select
+        default: medium
+        options:
+          values: [small, medium, large, full]
+      - name: crop
+        label: Crop
+        type: select
+        default: natural
+        options:
+          values: [natural, landscape, square, portrait]
+
+  text:
+    type: object
+    label: Text
+    fields:
+      - name: text
+        label: Text
+        type: rich-text
+        required: true
+
+  contentblock:
+    type: object
+    label: Content block
+    fields:
+      - name: color
+        label: Block color
+        type: select
+        default: transparent
+        options:
+          values: [navy, cream, white, transparent]
+      - name: variant
+        label: Block variant
+        type: select
+        default: default
+        options:
+          values: [default, card]
+      - name: blocks
+        label: Nested blocks
+        type: block
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Nested block {index}"
+        blockKey: type
+        blocks:
+          - name: text
+            label: Text block
+            component: text
+          - name: image
+            label: Image block
+            component: image
+          - name: button
+            label: Button block
+            fields:
+              - name: button
+                component: button
+          - name: gallery
+            label: Gallery block
+            fields:
+              - name: gallery
+                component: gallery
+
+  section:
+    type: object
+    label: Section
+    fields:
+      - name: color
+        label: Section color
+        type: select
+        required: true
+        default: cream
+        options:
+          values: [navy, cream, white, home-hero]
+      - name: heading
+        label: Section heading
+        type: string
+      - name: layout
+        label: Layout
+        type: select
+        default: auto
+        options:
+          values: [auto, 1col, 2cols, 3cols, 4cols, 5cols]
+      - name: blocks
+        label: Content blocks
+        type: block
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Block {index}"
+        blockKey: type
+        blocks:
+          - name: text
+            label: Text block
+            component: text
+          - name: image
+            label: Image block
+            fields:
+              - name: image
+                component: image
+          - name: button
+            label: Button block
+            fields:
+              - name: button
+                component: button
+          - name: block
+            label: Nested card block
+            fields:
+              - name: block
+                component: contentblock
+          - name: gallery
+            label: Gallery block
+            fields:
+              - name: gallery
+                component: gallery
+
+content:
+  - name: pages
+    label: Pages
+    type: collection
+    path: src/content/pages
+    subfolders: true
+    format: yaml-frontmatter
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title]
+    fields:
+      - name: title
         label: Page title
         type: string
         required: true
-      - name: heroTitle
-        label: Hero title
-        type: string
-        required: true
-      - name: subTitle
-        label: Subtitle
-        type: text
-      - name: body
-        label: Content
-        type: rich-text
-        options:
-          format: markdown
+      - name: sections
+        label: Page sections
+        component: section
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.color} section"
 
   - name: header
     label: Header

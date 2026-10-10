@@ -1,0 +1,61 @@
+.content-block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.content-block--default {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+    transition: none;
+}
+
+.content-block--card {
+    min-height: 0;
+    padding: var(--space-lg);
+    border: 2px solid var(--color-border-strong);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+}
+
+.content-block--card:hover {
+    transform: scale(1.01);
+    box-shadow: var(--shadow-2xl);
+}
+
+.content-block-color--transparent {
+    background-color: transparent;
+}
+
+.content-block-color--cream {
+    background-color: var(--color-bg);
+    color: var(--color-text-body);
+}
+
+.content-block-color--navy {
+    background-color: var(--color-surface-inverse);
+    color: var(--color-text-inverse);
+}
+
+.content-block-color--white {
+    background-color: var(--white);
+    color: var(--color-text-body);
+}
+
+.content-block-color--navy h1,
+.content-block-color--navy h2,
+.content-block-color--navy h3,
+.content-block-color--navy h4 {
+    color: var(--color-text-inverse);
+}
+
+.content-block-color--navy p {
+    color: var(--color-text-inverse-muted);
+}

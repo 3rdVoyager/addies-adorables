@@ -1,0 +1,21 @@
+---
+import PageLayout from "./PageLayout.astro";
+import ContentSection from "../components/ContentSection.astro";
+import type { PageFrontmatter } from "../content.config";
+
+const frontmatter = Astro.props.frontmatter as PageFrontmatter;
+const { title, sections = [] } = frontmatter;
+---
+
+<PageLayout pageTitle={title}>
+  {
+    sections.map((section) => (
+      <ContentSection
+        color={section.color}
+        heading={section.heading}
+        layout={section.layout}
+        blocks={section.blocks}
+      />
+    ))
+  }
+</PageLayout>

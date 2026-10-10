@@ -1,0 +1,46 @@
+.content-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-inline: auto;
+    border-radius: var(--radius-lg);
+    flex: none;
+    object-fit: contain;
+}
+
+.content-image--small {
+    max-width: 18rem;
+}
+
+.content-image--medium {
+    max-width: 32rem;
+}
+
+.content-image--large {
+    max-width: 48rem;
+}
+
+.content-image--full {
+    max-width: 100%;
+}
+
+.content-image--natural {
+    height: auto;
+    object-fit: contain;
+}
+
+.content-image--landscape {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.content-image--square {
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.content-image--portrait {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
