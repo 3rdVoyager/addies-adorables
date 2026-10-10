@@ -1,7 +1,25 @@
 ---
-const { title, columns = "" } = Astro.props;
+import "../styles/content-section.css";
+import ContentBlock from "./ContentBlock.astro";
+import type { Section } from "../content.config";
+
+const {
+  color = "cream",
+  heading,
+  layout = "auto",
+  blocks = [],
+} = Astro.props as Section;
 ---
-<section class={`content-section content-section-${columns}`}>
-    {title && <h2>{title}</h2>}
+
+<section class:list={["content-section", `content-section--${color}`]}>
+  {heading && <h2 class="content-section__heading">{heading}</h2>}
+
+  <div class:list={["content-section__blocks", `content-section-layout--${layout}`]}>
+    {
+      blocks.map((block) => (
+        <ContentBlock block={block} />
+      ))
+    }
     <slot />
+  </div>
 </section>

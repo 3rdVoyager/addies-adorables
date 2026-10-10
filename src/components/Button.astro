@@ -1,0 +1,7 @@
+---
+import "../styles/button.css";
+
+const { href, title, type = "primary" } = Astro.props;
+---
+
+<a class={`button button--${type}`} href={href}>{title}</a>

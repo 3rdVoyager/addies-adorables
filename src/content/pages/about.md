@@ -1,7 +1,12 @@
 ---
-pageTitle: About
-heroTitle: About
-subTitle: This is the about page.
----
+title: About
+sections:
+  - color: navy
+    layout: auto
+    blocks:
+      - type: text
+        text: |
+          # About
 
-This is the about page.
+          This is the about page.
+---

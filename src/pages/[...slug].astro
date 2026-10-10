@@ -1,6 +1,6 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
-import ContentRouter from "../components/ContentRouter.astro";
+import ContentLayout from "../layouts/ContentLayout.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -22,4 +22,4 @@ const { entry } = Astro.props as {
 };
 ---
 
-<ContentRouter entry={entry} />
+<ContentLayout frontmatter={entry.data} />

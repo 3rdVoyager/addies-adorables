@@ -1,0 +1,33 @@
+---
+import Button from "./Button.astro";
+import Gallery from "./Gallery.astro";
+import Image from "./Image.astro";
+import Markdown from "./Markdown.astro";
+import type { ContentBlockData } from "../content.config";
+
+const { block } = Astro.props as { block: ContentBlockData };
+const galleryImages = Array.isArray(block.gallery)
+  ? block.gallery
+  : block.gallery?.images ?? [];
+---
+
+{block.text && <Markdown text={block.text} />}
+
+{block.image?.src && (
+  <Image
+    src={block.image.src}
+    alt={block.image.alt ?? ""}
+    size={block.image.size}
+    crop={block.image.crop}
+  />
+)}
+
+{block.button && (
+  <Button
+    href={block.button.href}
+    title={block.button.title}
+    type={block.button.type ?? "primary"}
+  />
+)}
+
+{galleryImages.length ? <Gallery images={galleryImages} /> : null}

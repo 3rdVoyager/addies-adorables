@@ -4,7 +4,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 1rem var(--space-md);
-    border-bottom: 1px solid var(--color-border-inverse);
+    border-bottom: 2px solid var(--color-border-pink);
 }
 
 .site-brand {
@@ -81,7 +81,7 @@ header {
 
 .header-cta {
     padding: 9px 14px;
-    border: 1px solid var(--color-border-gold);
+    border: 1px solid var(--color-border-pink);
     border-radius: 4px;
     color: var(--color-text-inverse);
     font-size: var(--text-xs);

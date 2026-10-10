@@ -1,8 +1,8 @@
 ---
 import { getEntry } from "astro:content";
-import ContentRouter from "../components/ContentRouter.astro";
+import ContentLayout from "../layouts/ContentLayout.astro";
 
 const entry = await getEntry("pages", "index");
 ---
 
-<ContentRouter entry={entry} />
+<ContentLayout frontmatter={entry?.data} />

@@ -19,11 +19,11 @@
     --slate-300: #c7d0df;
 
     /* Dusty pink — primary accent and buttons */
-    --gold-300: #f7dadd;
-    --gold-400: #d98c9b;
-    --gold-500: #c87586;
-    --gold-600: #ae6172;
-    --gold-700: #8f4b5a;
+    --pink-300: #f7dadd;
+    --pink-400: #d98c9b;
+    --pink-500: #c87586;
+    --pink-600: #ae6172;
+    --pink-700: #8f4b5a;
 
     /* Cream and blush — page canvas and light surfaces */
     --cream-50: #fffdfb;
@@ -70,17 +70,17 @@
     --color-text-subtle: var(--stone-500);
     --color-text-inverse: var(--cream-50);
     --color-text-inverse-muted: var(--stone-400);
-    --color-text-accent: var(--gold-600);
+    --color-text-accent: var(--pink-600);
 
     /* Interactive */
     --color-link: var(--slate-700);
     --color-link-hover: var(--navy-800);
-    --color-link-inverse: var(--gold-300);
-    --color-focus-ring: var(--gold-500);
+    --color-link-inverse: var(--pink-300);
+    --color-focus-ring: var(--pink-500);
 
     /* Buttons */
-    --color-btn-primary-bg: var(--gold-400);
-    --color-btn-primary-bg-hover: var(--gold-300);
+    --color-btn-primary-bg: var(--pink-400);
+    --color-btn-primary-bg-hover: var(--pink-300);
     --color-btn-primary-text: var(--navy-900);
     --color-btn-secondary-bg: transparent;
     --color-btn-secondary-bg-hover: var(--navy-700);
@@ -92,7 +92,7 @@
     --color-border-strong: var(--stone-300);
     --color-border-dark: var(--stone-600);
     --color-border-inverse: rgba(255, 253, 251, 0.16);
-    --color-border-gold: var(--gold-500);
+    --color-border-pink: var(--pink-500);
 
     /* Status */
     --color-success: #4f7a53;

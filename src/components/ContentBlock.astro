@@ -1,7 +1,35 @@
 ---
-const { title, type = "" } = Astro.props;
+import "../styles/content-block.css";
+import ContentBlockContent from "./ContentBlockContent.astro";
+import type { ContentBlockData } from "../content.config";
+
+const { block, className = "", variant = "default" } = Astro.props as {
+  block?: ContentBlockData;
+  className?: string;
+  variant?: "default" | "card" | "transparent";
+};
+
+const blockVariant = block?.block?.variant ?? variant;
+const blockColor = block?.block?.color ?? "transparent";
 ---
-<div class={`content-block content-block-${type}`}>
-  {title && <h3>{title}</h3>}
-  <slot />
-</div>
+
+<section
+  class:list={[
+    "content-block",
+    `content-block--${blockVariant}`,
+    `content-block-color--${blockColor}`,
+    className,
+  ]}
+>
+  {block ? (
+    block.block ? (
+      block.block.blocks?.map((nestedBlock) => (
+        <Astro.self block={nestedBlock} />
+      ))
+    ) : (
+      <ContentBlockContent block={block} />
+    )
+  ) : (
+    <slot />
+  )}
+</section>

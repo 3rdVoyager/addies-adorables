@@ -1,0 +1,68 @@
+---
+import Image from "./Image.astro";
+import "../styles/gallery.css";
+
+interface GalleryImage {
+  src: string;
+  alt?: string;
+}
+
+interface Props {
+  images?: GalleryImage[];
+  size?: "small" | "medium" | "large" | "full";
+  crop?: "natural" | "landscape" | "square" | "portrait";
+}
+
+const { images = [], size = "large", crop = "landscape" } = Astro.props;
+const hasMultipleImages = images.length > 1;
+---
+
+<div class:list={["gallery", `gallery--${size}`, { "gallery--has-controls": hasMultipleImages }]} data-gallery>
+  <div class="gallery__viewport" tabindex="0" aria-label="Image gallery">
+    <div class="gallery__track">
+      {
+        images.map((image) => (
+          <div class="gallery__slide">
+            <Image src={image.src} alt={image.alt ?? ""} size="full" crop={crop} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  {
+    hasMultipleImages && (
+      <div class="gallery__controls">
+        <button type="button" data-gallery-previous aria-label="Previous image">
+          <span aria-hidden="true">←</span>
+        </button>
+        <button type="button" data-gallery-next aria-label="Next image">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    )
+  }
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-gallery]").forEach((gallery) => {
+    const viewport = gallery.querySelector<HTMLElement>(".gallery__viewport");
+    const slides = gallery.querySelectorAll<HTMLElement>(".gallery__slide");
+    const previous = gallery.querySelector<HTMLButtonElement>("[data-gallery-previous]");
+    const next = gallery.querySelector<HTMLButtonElement>("[data-gallery-next]");
+
+    if (!viewport || slides.length < 2) return;
+
+    let currentIndex = 0;
+    const showSlide = (index: number) => {
+      currentIndex = (index + slides.length) % slides.length;
+      viewport.scrollTo({
+        left: currentIndex * viewport.clientWidth,
+        behavior: "smooth",
+      });
+    };
+
+    previous?.addEventListener("click", () => showSlide(currentIndex - 1));
+    next?.addEventListener("click", () => showSlide(currentIndex + 1));
+  });
+</script>

@@ -1,0 +1,9 @@
+---
+import { marked } from "marked";
+import "../styles/markdown.css";
+
+const { text = "" } = Astro.props;
+const html = marked.parse(text);
+---
+
+<div class="markdown" set:html={html} />
