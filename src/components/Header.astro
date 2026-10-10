@@ -1,28 +1,20 @@
 ---
-const navLinks = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "About",
-    href: "/about",
-  },
-  {
-    label: "Adorables",
-    href: "/adorables",
-  },
-];
+import headerData from "../data/header.json";
 
+const { brand, navigation } = headerData;
 const currentPath = Astro.url.pathname;
 ---
 
 <header>
-  <a class="header-title" href="/"><h1>Addie's Adorables</h1></a>
-  <nav>
+  <a class="site-brand" href="/">
+    <span class="brand-mark" aria-hidden="true">{brand.mark}</span>
+    <span class="brand-name">{brand.name}</span>
+  </a>
+
+  <nav class="main-nav" aria-label="Main navigation">
     <ul>
       {
-        navLinks.map((link) => (
+        navigation.navLinks.map((link) => (
           <li aria-current={currentPath === link.href ? "page" : undefined}>
             <a href={link.href}>{link.label}</a>
           </li>
@@ -30,4 +22,12 @@ const currentPath = Astro.url.pathname;
       }
     </ul>
   </nav>
+
+  <div class="header-actions">
+    {
+      navigation.ctaLinks.map((cta) => (
+        <a class="header-cta" href={cta.href}>{cta.label}</a>
+      ))
+    }
+  </div>
 </header>

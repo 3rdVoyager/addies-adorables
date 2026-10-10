@@ -1,0 +1,28 @@
+{
+  "brand": {
+    "name": "Addie's Adorables",
+    "mark": "♡"
+  },
+  "navigation": {
+    "navLinks": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Adorables",
+        "href": "/adorables"
+      }
+    ],
+    "ctaLinks": [
+      {
+        "label": "Shop Adorables",
+        "href": "/adorables"
+      }
+    ]
+  }
+}

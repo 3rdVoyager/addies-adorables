@@ -1,15 +1,8 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
-import ContentSection from '../components/ContentSection.astro';
-import ContentBlock from '../components/ContentBlock.astro';
-import Hero from '../components/Hero.astro';
+import { getEntry } from "astro:content";
+import ContentRouter from "../components/ContentRouter.astro";
+
+const entry = await getEntry("pages", "index");
 ---
 
-<PageLayout pageTitle="Addie's Adorables">
-  <Hero type="home" heroTitle="Welcome to Addie's Adorables!" subTitle="Handmade crafts, crocheted with care, made to bring a little more joy." />
-  <ContentSection>
-    <ContentBlock title="About">
-      <p>This website is a collection of all the adorable crafts and items Addie has made.</p>
-    </ContentBlock>
-  </ContentSection>
-</PageLayout>
+<ContentRouter entry={entry} />

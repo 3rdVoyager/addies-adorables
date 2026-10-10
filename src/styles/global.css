@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-heading);
+    font-family: var(--font-display);
     font-weight: 600;
 }
 
@@ -29,7 +29,7 @@ p {
 }
 
 a {
-    color: var(--color-ink);
+    color: var(--color-link);
     text-decoration: none;
 }
 
@@ -38,18 +38,18 @@ li {
 }
 
 main {
-    background-color: var(--color-background);
+    background-color: var(--color-bg);
     flex: 1;
 }
 
 .hero {
-    background-color: var(--color-primary-light);
+    background-color: var(--color-surface-alt);
     padding: 20px;
     min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1px solid var(--color-secondary-accent);
+    border-bottom: 1px solid var(--color-border-strong);
 }
 
 .hero-home {
@@ -59,7 +59,7 @@ main {
 }
 
 .content-section {
-    background-color: var(--color-background);
+    background-color: var(--color-bg);
     padding: 20px;
 }
 
@@ -78,12 +78,12 @@ main {
 }
 
 .content-block {
-    background-color: var(--color-background);
+    background-color: var(--color-bg);
     padding: 20px;
 }
 
 .content-block-card {
-    background-color: var(--color-background);
+    background-color: var(--color-surface);
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }

@@ -1,12 +1,153 @@
 :root {
-    --color-ink: #263a55;
-    --color-primary-accent: #d98c9b;
-    --color-primary-light: #faeeee;
-    --color-secondary-accent: #b8c3d4;
-    --color-supporting-accent: #a8b9a7;
-    --color-highlight: #f5d989;
-    --color-background: #fffdfb;
+    /* ---------------------------------------------------------
+       1. RAW PALETTE
+       Addie's pink, cream, and blue palette.
+       Only reference these from the semantic layer below.
+       --------------------------------------------------------- */
 
-    --font-heading: "Fredoka", sans-serif;
+    /* Deep blue — header, display text */
+    --navy-950: #172033;
+    --navy-900: #263a55;
+    --navy-800: #304763;
+    --navy-700: #3e5872;
+
+    /* Muted blue — headings, links, secondary accents */
+    --slate-700: #59677f;
+    --slate-600: #71809a;
+    --slate-500: #8a98b0;
+    --slate-400: #aebbd0;
+    --slate-300: #c7d0df;
+
+    /* Dusty pink — primary accent and buttons */
+    --gold-300: #f7dadd;
+    --gold-400: #d98c9b;
+    --gold-500: #c87586;
+    --gold-600: #ae6172;
+    --gold-700: #8f4b5a;
+
+    /* Cream and blush — page canvas and light surfaces */
+    --cream-50: #fffdfb;
+    --cream-100: #fdf5f4;
+    --cream-200: #faeeee;
+    --cream-300: #f3e0e1;
+
+    /* Stone — muted copy and hairlines */
+    --stone-200: #e8e1e2;
+    --stone-300: #d8ced0;
+    --stone-400: #b8c3d4;
+    --stone-500: #9ba3b0;
+    --stone-600: #707986;
+    --stone-700: #515964;
+
+    /* White / ink neutrals */
+    --white: #ffffff;
+    --ink-400: #626a76;
+    --ink-700: #414956;
+    --ink-900: #222936;
+
+    /* ---------------------------------------------------------
+       2. SEMANTIC TOKENS
+       Components should reference these, not the raw palette.
+       --------------------------------------------------------- */
+
+    /* Surfaces */
+    --color-bg: var(--cream-50);
+    --color-surface: var(--white);
+    --color-surface-alt: var(--cream-200);
+    --color-surface-inverse: var(--navy-900);
+
+    /* Brand surfaces */
+    --color-header-bg: var(--navy-900);
+    --color-footer-bg: var(--navy-950);
+    --color-banner-bg: var(--slate-600);
+    --color-hero-overlay: rgba(38, 58, 85, 0.55);
+    --color-hero-scrim: rgba(38, 58, 85, 0.75);
+
+    /* Text */
+    --color-text-heading: var(--navy-800);
+    --color-text-body: var(--ink-700);
+    --color-text-muted: var(--ink-400);
+    --color-text-subtle: var(--stone-500);
+    --color-text-inverse: var(--cream-50);
+    --color-text-inverse-muted: var(--stone-400);
+    --color-text-accent: var(--gold-600);
+
+    /* Interactive */
+    --color-link: var(--slate-700);
+    --color-link-hover: var(--navy-800);
+    --color-link-inverse: var(--gold-300);
+    --color-focus-ring: var(--gold-500);
+
+    /* Buttons */
+    --color-btn-primary-bg: var(--gold-400);
+    --color-btn-primary-bg-hover: var(--gold-300);
+    --color-btn-primary-text: var(--navy-900);
+    --color-btn-secondary-bg: transparent;
+    --color-btn-secondary-bg-hover: var(--navy-700);
+    --color-btn-secondary-text: var(--cream-50);
+    --color-btn-secondary-border: rgba(255, 253, 251, 0.55);
+
+    /* Borders and dividers */
+    --color-border: var(--stone-200);
+    --color-border-strong: var(--stone-300);
+    --color-border-dark: var(--stone-600);
+    --color-border-inverse: rgba(255, 253, 251, 0.16);
+    --color-border-gold: var(--gold-500);
+
+    /* Status */
+    --color-success: #4f7a53;
+    --color-warning: #c98b3a;
+    --color-error: #a4453c;
+    --color-info: var(--slate-500);
+
+    /* ---------------------------------------------------------
+       3. TYPOGRAPHY
+       --------------------------------------------------------- */
+    --font-display: "Fredoka", sans-serif;
     --font-body: "Nunito Sans", sans-serif;
+
+    --text-eyebrow: 0.75rem;
+    --text-xs: 0.8125rem;
+    --text-sm: 0.9375rem;
+    --text-base: 1.0625rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 2rem;
+    --text-3xl: 2.75rem;
+    --text-4xl: 3.5rem;
+
+    --leading-tight: 1.15;
+    --leading-snug: 1.35;
+    --leading-normal: 1.6;
+    --tracking-wide: 0.18em;
+    --tracking-normal: 0.01em;
+
+    /* ---------------------------------------------------------
+       4. SPACE, RADIUS, SHADOW, MOTION
+       --------------------------------------------------------- */
+    --space-3xs: 0.25rem;
+    --space-2xs: 0.5rem;
+    --space-xs: 0.75rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-pill: 999px;
+
+    --shadow-sm: 0 1px 2px rgba(34, 41, 54, 0.06);
+    --shadow-md: 0 4px 12px rgba(34, 41, 54, 0.08);
+    --shadow-lg: 0 12px 32px rgba(34, 41, 54, 0.12);
+    --shadow-xl: 0 24px 64px rgba(34, 41, 54, 0.16);
+    --shadow-2xl: 0 48px 128px rgba(34, 41, 54, 0.24);
+
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
 }
