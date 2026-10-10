@@ -1,8 +1,22 @@
 media:
-  - name: adorable_images
-    label: Adorable images
-    input: public/images/adorables
-    output: /images/adorables
+  - name: images
+    label: Images
+    input: public/assets/uploads/images
+    output: /assets/uploads/images
+    categories: [image]
+    extensions: [webp]
+  - name: documents
+    label: Documents
+    input: public/assets/uploads/documents
+    output: /assets/uploads/documents
+    categories: [document]
+    extensions: [pdf]
+  - name: brand
+    label: Brand assets
+    input: public/assets/brand
+    output: /assets/brand
+    categories: [image]
+    extensions: [png, svg, ico, webp]
 
 components:
   button:
@@ -41,10 +55,45 @@ components:
             type: image
             required: true
             options:
-              media: adorable_images
+              media: images
           - name: alt
             label: Accessibility text
             type: string
+      - name: size
+        label: Gallery width
+        type: select
+        default: large
+        options:
+          values: [small, medium, large, full]
+        description: Controls the gallery's maximum width.
+      - name: crop
+        label: Image crop
+        type: select
+        default: natural
+        options:
+          values: [natural, landscape, square, portrait]
+        description: Natural shows each image without cropping.
+      - name: controls
+        label: Show arrow controls
+        type: boolean
+        default: true
+      - name: indicators
+        label: Show slide indicators
+        type: boolean
+        default: true
+      - name: autoScroll
+        label: Auto-scroll
+        type: boolean
+        default: false
+      - name: autoScrollInterval
+        label: Auto-scroll interval
+        type: number
+        default: 5000
+        description: Time between slides in milliseconds.
+      - name: pauseOnHover
+        label: Pause on hover
+        type: boolean
+        default: true
 
   image:
     type: object
@@ -55,7 +104,7 @@ components:
         type: image
         required: true
         options:
-          media: adorable_images
+          media: images
       - name: alt
         label: Accessibility text
         type: string
