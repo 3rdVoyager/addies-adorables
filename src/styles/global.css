@@ -60,5 +60,30 @@ main {
 
 .content-section {
     background-color: var(--color-background);
-    padding: 40px;
+    padding: 20px;
+}
+
+.content-section-2-columns {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.content-section-3-columns {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.content-block {
+    background-color: var(--color-background);
+    padding: 20px;
+}
+
+.content-block-card {
+    background-color: var(--color-background);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
