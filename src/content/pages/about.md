@@ -7,6 +7,4 @@ sections:
       - type: text
         text: |
           # About
-
-          This is the about page.
 ---
