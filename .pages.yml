@@ -232,9 +232,7 @@ content:
     path: src/content/pages
     subfolders: true
     format: yaml-frontmatter
-    filename:
-      template: "{primary}.md"
-      field: create
+    filename: "{primary}.md"
     view:
       primary: title
       fields: [title]
