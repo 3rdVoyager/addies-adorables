@@ -7,46 +7,141 @@ sections:
     blocks:
       - type: block
         block:
-          color: white
+          color: transparent
           variant: card
           blocks:
             - type: text
-              text: "### Horse Keychain"
+              text: |+
+                ### Crochet Horse Keychain
+
             - type: button
               button:
                 title: View
-                href: /adorables/adorable-1
+                href: /adorables/crochet-horse-keychain/
+                type: primary
       - type: block
         block:
-          color: white
+          color: transparent
           variant: card
           blocks:
             - type: text
-              text: "### Photos"
+              text: |+
+                ### Crochet Rose Keychain
+
             - type: button
               button:
                 title: View
-                href: /adorables/photos
+                href: /adorables/crochet-rose-keychain/
+                type: primary
       - type: block
         block:
-          color: white
+          color: transparent
           variant: card
           blocks:
             - type: text
-              text: "### Template Adorable"
+              text: |+
+                ### Crochet Christmas Tree Hat
+
             - type: button
               button:
                 title: View
-                href: /adorables/template
+                href: /adorables/crochet-christmas-tree-hat/
+                type: primary
       - type: block
         block:
-          color: white
+          color: transparent
           variant: card
           blocks:
             - type: text
-              text: "### Mini Crochet Whales"
+              text: |+
+                ### Crochet Turkey Hat
+
             - type: button
               button:
                 title: View
-                href: /adorables/mini-crochet-whales
+                href: /adorables/crochet-turkey-hat/
+                type: primary
+      - type: block
+        block:
+          color: transparent
+          variant: card
+          blocks:
+            - type: text
+              text: |+
+                ### Crochet Snowman Hat
+
+            - type: button
+              button:
+                title: View
+                href: /adorables/crochet-snowman-hat/
+                type: primary
+      - type: block
+        block:
+          color: transparent
+          variant: card
+          blocks:
+            - type: text
+              text: |+
+                ### Crochet Plunger Hat
+
+            - type: button
+              button:
+                title: View
+                href: /adorables/crochet-plunger-hat/
+                type: primary
+      - type: block
+        block:
+          color: transparent
+          variant: card
+          blocks:
+            - type: text
+              text: |+
+                ### Crochet Yellow Tang
+
+            - type: button
+              button:
+                title: View
+                href: /adorables/crochet-yellow-tang/
+                type: primary
+      - type: block
+        block:
+          color: transparent
+          variant: card
+          blocks:
+            - type: text
+              text: |+
+                ### Crochet Bunny Plushie
+
+            - type: button
+              button:
+                title: View
+                href: /adorables/crochet-bunny-plushie/
+                type: primary
+      - type: block
+        block:
+          color: transparent
+          variant: card
+          blocks:
+            - type: text
+              text: |+
+                ### Crochet Hamster Plushie
+
+            - type: button
+              button:
+                title: View
+                href: /adorables/crochet-hamster-plushie/
+                type: primary
+  - color: cream
+    heading: Katherine's Crafts
+    layout: 3cols
+    blocks:
+      - type: block
+        block:
+          color: transparent
+          variant: card
+      - type: button
+        button:
+          title: View
+          href: /adorables/mini-crochet-whales/
+          type: primary
 ---
