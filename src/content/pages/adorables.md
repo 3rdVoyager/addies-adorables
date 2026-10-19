@@ -75,4 +75,18 @@ sections:
                 title: View
                 href: /adorables/crochet-snowman-hat/
                 type: primary
+      - type: block
+        block:
+          color: transparent
+          variant: card
+          blocks:
+            - type: text
+              text: |+
+                ### Crochet Plunger Hat
+
+            - type: button
+              button:
+                title: View
+                href: /adorables/crochet-plunger-hat/
+                type: primary
 ---
