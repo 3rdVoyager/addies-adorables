@@ -110,7 +110,7 @@ sections:
       - type: block
         block:
           color: transparent
-          variant: default
+          variant: card
       - type: button
         button:
           title: View
