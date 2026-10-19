@@ -33,4 +33,18 @@ sections:
                 title: View
                 href: /adorables/crochet-rose-keychain/
                 type: primary
+      - type: block
+        block:
+          color: transparent
+          variant: default
+          blocks:
+            - type: text
+              text: |+
+                ### Crochet Christmas Tree Hat
+
+            - type: button
+              button:
+                title: View
+                href: /adorables/crochet-christmas-tree-hat/
+                type: primary
 ---
