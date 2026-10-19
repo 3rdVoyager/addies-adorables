@@ -13,6 +13,7 @@ sections:
       - type: image
         image:
           src: /assets/uploads/images/IMG_7267.webp
+          alt: Crochet Rose Keychain
           size: medium
           crop: natural
 ---
