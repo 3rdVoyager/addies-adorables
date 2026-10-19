@@ -9,5 +9,7 @@ sections:
         text: |-
           A hat for those who love snow!
 
+          Customizable hat and scarf colors!
+
           $25
 ---
