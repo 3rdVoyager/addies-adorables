@@ -103,4 +103,22 @@ sections:
                 title: View
                 href: /adorables/crochet-yellow-tang/
                 type: primary
+  - color: cream
+    heading: Katherine's Crafts
+    layout: auto
+    blocks:
+      - type: block
+        block:
+          color: transparent
+          variant: default
+          blocks:
+            - type: text
+              text: |+
+                ### Mini Crochet Whales
+
+            - type: button
+              button:
+                title: View
+                href: /adorables/mini-crochet-whales/
+                type: primary
 ---
