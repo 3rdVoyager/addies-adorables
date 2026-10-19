@@ -1,5 +1,5 @@
 ---
-title: Crochet Horse
+title: Crochet Horse Keychain
 sections:
   - color: cream
     layout: 1col
@@ -14,7 +14,7 @@ sections:
           size: medium
           crop: natural
   - color: cream
-    heading: What?
+    heading: Crochet Horse Keychain
     layout: auto
     blocks:
       - type: text
