@@ -7,15 +7,17 @@ sections:
     blocks:
       - type: block
         block:
-          color: white
+          color: transparent
           variant: card
           blocks:
             - type: text
-              text: "### Mini Crochet Whales"
+              text: |+
+                ### Crochet Horse Keychain
+
             - type: button
               button:
                 title: View
-                href: /adorables/mini-crochet-whales
+                href: /adorables/crochet-horse/
                 type: primary
       - type: block
         block:
@@ -23,7 +25,9 @@ sections:
           variant: card
           blocks:
             - type: text
-              text: "### Crochet Horse"
+              text: |+
+                ### Crochet Rose Keychain
+
             - type: button
               button:
                 title: View
