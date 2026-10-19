@@ -17,7 +17,7 @@ sections:
             - type: button
               button:
                 title: View
-                href: /adorables/crochet-horse/
+                href: /adorables/crochet-horse-keychain/
                 type: primary
       - type: block
         block:
