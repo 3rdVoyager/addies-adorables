@@ -9,6 +9,8 @@ sections:
         text: |-
           A little decoration for any bag!
 
+          Customizable rose color!
+
           $5
       - type: image
         image:
