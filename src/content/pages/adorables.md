@@ -47,4 +47,18 @@ sections:
                 title: View
                 href: /adorables/crochet-christmas-tree-hat/
                 type: primary
+      - type: block
+        block:
+          color: transparent
+          variant: card
+          blocks:
+            - type: text
+              text: |+
+                ### Crochet Turkey Hat
+
+            - type: button
+              button:
+                title: View
+                href: /adorables/crochet-turkey-hat/
+                type: primary
 ---
