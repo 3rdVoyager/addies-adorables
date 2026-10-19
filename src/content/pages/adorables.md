@@ -36,7 +36,7 @@ sections:
       - type: block
         block:
           color: transparent
-          variant: default
+          variant: card
           blocks:
             - type: text
               text: |+
