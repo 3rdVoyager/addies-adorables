@@ -1,19 +1,19 @@
 ---
-title: How It Works
+title: How to Order
 description: Ask Addie to make an adorable in your favorite colors.
 ---
 
 <div class="page-section">
-  <h1>How It Works</h1>
+  <h1>How to Order</h1>
   <p>Every adorable can be made in any of your favorite colors. Tell us what you have in mind and Addie will make it just for you.</p>
 </div>
 
 <div class="page-section">
-  <h2>How It Works</h2>
+  <h2>How to Order</h2>
   <div class="card-grid">
     <article class="content-card">
       <h3>1. Pick an Adorable</h3>
-      <p>Choose any item from the Adorables page, or describe something new you would love.</p>
+      <p>Choose any item from the <a href="/adorables">Adorables page</a>, or describe something new you would love.</p>
     </article>
     <article class="content-card">
       <h3>2. Choose Your Colors</h3>
@@ -28,11 +28,9 @@ description: Ask Addie to make an adorable in your favorite colors.
 
 <div class="page-section">
   <h2>What Can Be Customized</h2>
-  <ul>
-    <li>Colors for the whole item or individual parts</li>
-    <li>Sizes where the pattern allows it</li>
-    <li>Add-ons like bows, hearts, or keychain rings</li>
-  </ul>
+  <p>Colors can be customized for the whole item or for individual parts.</p>
+  <p>Sizes can be adjusted where the pattern allows it.</p>
+  <p>Add-ons like bows, hearts, or keychain rings can also be included.</p>
 </div>
 
 <div class="page-section">

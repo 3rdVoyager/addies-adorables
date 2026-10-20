@@ -15,8 +15,8 @@ description: Answers to common questions about ordering Addie's Adorables.
 
 <div class="page-section">
   <h2>Can I request different colors?</h2>
-  <p>Absolutely. Almost every adorable can be made in custom colors. Visit the How It Works page to learn more.</p>
-  <p><a class="button-link" href="/how-it-works">How It Works</a></p>
+  <p>Absolutely. Almost every adorable can be made in custom colors. Visit the How to Order page to learn more.</p>
+  <p><a class="button-link" href="/how-to-order">How to Order</a></p>
 </div>
 
 <div class="page-section">
