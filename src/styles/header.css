@@ -38,6 +38,10 @@ header {
     align-items: center;
 }
 
+.header-actions {
+    gap: clamp(12px, 2vw, 24px);
+}
+
 .main-nav ul {
     gap: clamp(18px, 2.5vw, 36px);
 }

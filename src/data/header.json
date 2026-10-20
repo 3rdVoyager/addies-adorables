@@ -10,14 +10,26 @@
         "href": "/"
       },
       {
+        "label": "How to Order",
+        "href": "/how-to-order"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq"
+      },
+      {
         "label": "About",
         "href": "/about"
       }
     ],
     "ctaLinks": [
       {
-        "label": "Shop Adorables",
+        "label": "Adorables",
         "href": "/adorables"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
       }
     ]
   }
