@@ -12,7 +12,7 @@ description: Browse handmade crochet adorables.
     </article>
     <article class="content-card">
       <h3><a href="/adorables/crochet-rose-keychain/">Crochet Rose Keychain</a></h3>
-      <p>A little decoration for any bag! $5.</p>
+      <p>A little decoration for any bag!</p>
     </article>
     <article class="content-card">
       <h3><a href="/adorables/crochet-christmas-tree-hat/">Crochet Christmas Tree Hat</a></h3>
@@ -20,11 +20,11 @@ description: Browse handmade crochet adorables.
     </article>
     <article class="content-card">
       <h3><a href="/adorables/crochet-turkey-hat/">Crochet Turkey Hat</a></h3>
-      <p>A hilarious hat in honor of a very large and important meal! $25.</p>
+      <p>A hilarious hat in honor of a very large and important meal!</p>
     </article>
     <article class="content-card">
       <h3><a href="/adorables/crochet-snowman-hat/">Crochet Snowman Hat</a></h3>
-      <p>A hat for those who love snow! $25.</p>
+      <p>A hat for those who love snow!</p>
     </article>
     <article class="content-card">
       <h3><a href="/adorables/crochet-plunger-hat/">Crochet Plunger Hat</a></h3>
