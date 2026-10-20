@@ -10,8 +10,6 @@ sections:
           The perfect little companion for any occasion!
 
           Customizable bow and heart colors!
-
-          $20
       - type: image
         image:
           src: /assets/uploads/images/Screenshot 2026-10-19 203702.webp
