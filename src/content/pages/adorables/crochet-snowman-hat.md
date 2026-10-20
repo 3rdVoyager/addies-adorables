@@ -1,15 +1,12 @@
 ---
 title: Crochet Snowman Hat
-sections:
-  - color: cream
-    heading: Crochet Snowman Hat
-    layout: auto
-    blocks:
-      - type: text
-        text: |-
-          A hat for those who love snow!
-
-          Customizable hat and scarf colors!
-
-          $25
+description: A hat for those who love snow! $25.
 ---
+
+<div class="page-section">
+  <h1>Crochet Snowman Hat</h1>
+  <p>A hat for those who love snow!</p>
+  <p>Customizable hat and scarf colors!</p>
+  <p><strong>$25</strong></p>
+</div>
+

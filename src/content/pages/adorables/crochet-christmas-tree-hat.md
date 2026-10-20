@@ -1,10 +1,10 @@
 ---
 title: Crochet Christmas Tree Hat
-sections:
-  - color: cream
-    heading: Crochet Christmas Tree Hat
-    layout: auto
-    blocks:
-      - type: text
-        text: A festive hat for any holiday occasion!
+description: A festive hat for any holiday occasion!
 ---
+
+<div class="page-section">
+  <h1>Crochet Christmas Tree Hat</h1>
+  <p>A festive hat for any holiday occasion!</p>
+</div>
+
