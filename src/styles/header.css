@@ -26,10 +26,11 @@ header {
     opacity: 0.82;
 }
 
-.brand-mark {
-    color: var(--color-text-accent);
-    font-family: Georgia, serif;
-    font-size: 2rem;
+.brand-logo {
+    height: 3rem;
+    width: auto;
+    display: inline-block;
+    border-radius: 50%;
 }
 
 .main-nav ul,

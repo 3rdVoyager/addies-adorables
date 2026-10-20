@@ -1,15 +1,15 @@
 ---
-title: How to Order
+title: Get an Adorable
 description: Ask Addie to make an adorable in your favorite colors.
 ---
 
 <div class="page-section">
-  <h1>How to Order</h1>
+  <h1>Get an Adorable</h1>
   <p>Every adorable can be made in any of your favorite colors. Tell us what you have in mind and Addie will make it just for you.</p>
 </div>
 
 <div class="page-section">
-  <h2>How to Order</h2>
+  <h2>Get an Adorable</h2>
   <div class="card-grid">
     <article class="content-card">
       <h3>1. Pick an Adorable</h3>

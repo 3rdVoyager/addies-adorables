@@ -10,16 +10,16 @@
         "href": "/"
       },
       {
-        "label": "How to Order",
-        "href": "/how-to-order"
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Get an Adorable",
+        "href": "/get-an-adorable"
       },
       {
         "label": "FAQ",
         "href": "/faq"
-      },
-      {
-        "label": "About",
-        "href": "/about"
       }
     ],
     "ctaLinks": [
