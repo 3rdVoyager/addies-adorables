@@ -109,7 +109,9 @@ sections:
           variant: card
           blocks:
             - type: text
-              text: Crochet Bunny Plushie
+              text: |+
+                ### Crochet Bunny Plushie
+
             - type: button
               button:
                 title: View
