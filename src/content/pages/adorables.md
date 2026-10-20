@@ -103,6 +103,18 @@ sections:
                 title: View
                 href: /adorables/crochet-yellow-tang/
                 type: primary
+      - type: block
+        block:
+          color: transparent
+          variant: card
+          blocks:
+            - type: text
+              text: Crochet Bunny Plushie
+            - type: button
+              button:
+                title: View
+                href: /adorables/crochet-bunny-plushie/
+                type: primary
   - color: cream
     heading: Katherine's Crafts
     layout: 3cols
