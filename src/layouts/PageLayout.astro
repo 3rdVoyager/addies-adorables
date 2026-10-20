@@ -2,10 +2,14 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/variables.css';
+import '../styles/base.css';
+import '../styles/page.css';
+import '../styles/components.css';
+import '../styles/gallery.css';
 import '../styles/global.css';
 import '../styles/header.css';
 
-const { pageTitle } = Astro.props;
+const { pageTitle, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,7 +20,9 @@ const { pageTitle } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		{description && <meta name="description" content={description} />}
 		<title>{pageTitle} | Addie's Adorables</title>
+		<script src="/scripts/gallery.js" defer></script>
 	</head>
 	<body>
 		<Header />

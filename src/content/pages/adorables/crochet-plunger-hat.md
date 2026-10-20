@@ -1,10 +1,10 @@
 ---
 title: Crochet Plunger Hat
-sections:
-  - color: cream
-    heading: Crochet Plunger Hat
-    layout: auto
-    blocks:
-      - type: text
-        text: The perfect hat for a trip to the bathroom!
+description: The perfect hat for a trip to the bathroom!
 ---
+
+<div class="page-section">
+  <h1>Crochet Plunger Hat</h1>
+  <p>The perfect hat for a trip to the bathroom!</p>
+</div>
+

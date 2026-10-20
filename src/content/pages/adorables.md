@@ -1,147 +1,47 @@
 ---
 title: Adorables
-sections:
-  - color: cream
-    heading: Browse Adorables
-    layout: 3cols
-    blocks:
-      - type: block
-        block:
-          color: transparent
-          variant: card
-          blocks:
-            - type: text
-              text: |+
-                ### Crochet Horse Keychain
-
-            - type: button
-              button:
-                title: View
-                href: /adorables/crochet-horse-keychain/
-                type: primary
-      - type: block
-        block:
-          color: transparent
-          variant: card
-          blocks:
-            - type: text
-              text: |+
-                ### Crochet Rose Keychain
-
-            - type: button
-              button:
-                title: View
-                href: /adorables/crochet-rose-keychain/
-                type: primary
-      - type: block
-        block:
-          color: transparent
-          variant: card
-          blocks:
-            - type: text
-              text: |+
-                ### Crochet Christmas Tree Hat
-
-            - type: button
-              button:
-                title: View
-                href: /adorables/crochet-christmas-tree-hat/
-                type: primary
-      - type: block
-        block:
-          color: transparent
-          variant: card
-          blocks:
-            - type: text
-              text: |+
-                ### Crochet Turkey Hat
-
-            - type: button
-              button:
-                title: View
-                href: /adorables/crochet-turkey-hat/
-                type: primary
-      - type: block
-        block:
-          color: transparent
-          variant: card
-          blocks:
-            - type: text
-              text: |+
-                ### Crochet Snowman Hat
-
-            - type: button
-              button:
-                title: View
-                href: /adorables/crochet-snowman-hat/
-                type: primary
-      - type: block
-        block:
-          color: transparent
-          variant: card
-          blocks:
-            - type: text
-              text: |+
-                ### Crochet Plunger Hat
-
-            - type: button
-              button:
-                title: View
-                href: /adorables/crochet-plunger-hat/
-                type: primary
-      - type: block
-        block:
-          color: transparent
-          variant: card
-          blocks:
-            - type: text
-              text: |+
-                ### Crochet Yellow Tang
-
-            - type: button
-              button:
-                title: View
-                href: /adorables/crochet-yellow-tang/
-                type: primary
-      - type: block
-        block:
-          color: transparent
-          variant: card
-          blocks:
-            - type: text
-              text: |+
-                ### Crochet Bunny Plushie
-
-            - type: button
-              button:
-                title: View
-                href: /adorables/crochet-bunny-plushie/
-                type: primary
-      - type: block
-        block:
-          color: transparent
-          variant: card
-          blocks:
-            - type: text
-              text: |+
-                ### Crochet Hamster Plushie
-
-            - type: button
-              button:
-                title: View
-                href: /adorables/crochet-hamster-plushie/
-                type: primary
-  - color: cream
-    heading: Katherine's Crafts
-    layout: 3cols
-    blocks:
-      - type: block
-        block:
-          color: transparent
-          variant: card
-      - type: button
-        button:
-          title: View
-          href: /adorables/mini-crochet-whales/
-          type: primary
+description: Browse handmade crochet adorables.
 ---
+
+<div class="page-section">
+  <h1>Browse Adorables</h1>
+  <div class="card-grid">
+    <article class="content-card">
+      <h3>Crochet Horse Keychain</h3>
+      <p><a class="button-link" href="/adorables/crochet-horse-keychain/">View</a></p>
+    </article>
+    <article class="content-card">
+      <h3>Crochet Rose Keychain</h3>
+      <p><a class="button-link" href="/adorables/crochet-rose-keychain/">View</a></p>
+    </article>
+    <article class="content-card">
+      <h3>Crochet Christmas Tree Hat</h3>
+      <p><a class="button-link" href="/adorables/crochet-christmas-tree-hat/">View</a></p>
+    </article>
+    <article class="content-card">
+      <h3>Crochet Turkey Hat</h3>
+      <p><a class="button-link" href="/adorables/crochet-turkey-hat/">View</a></p>
+    </article>
+    <article class="content-card">
+      <h3>Crochet Snowman Hat</h3>
+      <p><a class="button-link" href="/adorables/crochet-snowman-hat/">View</a></p>
+    </article>
+    <article class="content-card">
+      <h3>Crochet Plunger Hat</h3>
+      <p><a class="button-link" href="/adorables/crochet-plunger-hat/">View</a></p>
+    </article>
+    <article class="content-card">
+      <h3>Crochet Yellow Tang</h3>
+      <p><a class="button-link" href="/adorables/crochet-yellow-tang/">View</a></p>
+    </article>
+    <article class="content-card">
+      <h3>Crochet Bunny Plushie</h3>
+      <p><a class="button-link" href="/adorables/crochet-bunny-plushie/">View</a></p>
+    </article>
+    <article class="content-card">
+      <h3>Crochet Hamster Plushie</h3>
+      <p><a class="button-link" href="/adorables/crochet-hamster-plushie/">View</a></p>
+    </article>
+  </div>
+</div>
+
