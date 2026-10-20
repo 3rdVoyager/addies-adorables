@@ -10,14 +10,26 @@
         "href": "/"
       },
       {
+        "label": "How it Works",
+        "href": "/how-it-works"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq"
+      },
+      {
         "label": "About",
         "href": "/about"
       }
     ],
     "ctaLinks": [
       {
-        "label": "View Adorables",
+        "label": "Adorables",
         "href": "/adorables"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
       }
     ]
   }
