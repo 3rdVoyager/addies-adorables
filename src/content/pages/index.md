@@ -4,11 +4,10 @@ description: Handmade crafts, crocheted with care, made to bring a little more j
 ---
 
 <div class="page-section home-hero">
-  <div class="home-hero-text">
-    <h1>Welcome to Addie's Adorables!</h1>
-    <p>Handmade crafts, crocheted with care, made to bring a little more joy.</p>
-    <p><a class="button-link" href="/adorables">Shop Adorables</a> <a class="button-link" href="/custom-orders">Custom Orders</a></p>
-  </div>
+  <h1>Welcome to Addie's Adorables!</h1>
+  <img class="brand-logo" src="/assets/uploads/images/logo.png" alt="Addie's Adorables Logo">
+  <p>Handmade crafts, crocheted with care, made to bring a little more joy.</p>
+  <p><a class="button-link" href="/adorables">Browse Adorables</a> <a class="button-link" href="/get-an-adorable">Get an Adorable</a></p>
 </div>
 
 <div class="page-section">
@@ -47,7 +46,7 @@ description: Handmade crafts, crocheted with care, made to bring a little more j
       <p>Each adorable is crocheted by hand, just for you.</p>
     </article>
   </div>
-  <p><a class="button-link" href="/custom-orders">Start a Custom Order</a></p>
+  <p><a class="button-link" href="/get-an-adorable">Start a Custom Order</a></p>
 </div>
 
 <div class="page-section">
@@ -55,4 +54,3 @@ description: Handmade crafts, crocheted with care, made to bring a little more j
   <p>Addie started crocheting as a way to unwind after a long day. What began as a quiet hobby quickly turned into something more when friends started asking for their own little handmade friends. Addie's Adorables was born from a love of handmade gifts and the belief that a single, small crocheted friend can bring a lot of joy.</p>
   <p><a class="button-link" href="/about">Learn More</a></p>
 </div>
-

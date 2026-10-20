@@ -30,16 +30,14 @@ description: Learn more about Addie's Adorables and the handmade crochet adorabl
 
 <div class="page-section">
   <h2>Our Values</h2>
-  <ul>
-    <li><strong>Handmade with care</strong> &mdash; every stitch is made by hand.</li>
-    <li><strong>Custom colors</strong> &mdash; tell us your palette or we will help you choose.</li>
-    <li><strong>Small studio</strong> &mdash; personal attention every step of the way.</li>
-  </ul>
+  <p><strong>Handmade with care</strong> &mdash; every stitch is made by hand.</p>
+  <p><strong>Custom colors</strong> &mdash; tell us your palette or we will help you choose.</p>
+  <p><strong>Small studio</strong> &mdash; personal attention every step of the way.</p>
 </div>
 
 <div class="page-section">
   <h2>Starting a Custom Order</h2>
-  <p>Have something in mind? Take a look at the How to Order page for more information.</p>
-  <p><a class="button-link" href="/how-to-order">How to Order</a></p>
+  <p>Have something in mind? Take a look at the Get an Adorable page for more information.</p>
+  <p><a class="button-link" href="/get-an-adorable">Get an Adorable</a></p>
 </div>
 
