@@ -27,7 +27,6 @@ main {
 
 a {
   text-decoration: none;
-  color: var(--color-link);
 }
 
 h1,
@@ -75,6 +74,10 @@ a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--color-focus-ring);
   outline-offset: 3px;
+}
+
+ul {
+  list-style: none;
 }
 
 @media (max-width: 650px) {
