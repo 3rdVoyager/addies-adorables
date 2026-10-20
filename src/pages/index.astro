@@ -1,8 +1,19 @@
 ---
-import { getEntry } from "astro:content";
-import ContentLayout from "../layouts/ContentLayout.astro";
+import { getEntry, render } from "astro:content";
+import PageLayout from "../layouts/PageLayout.astro";
+import "../styles/home.css";
 
-const entry = await getEntry("pages", "index");
+const page = await getEntry("pages", "index");
+
+if (!page) {
+  return new Response("Not Found", { status: 404 });
+}
+
+const { Content } = await render(page);
 ---
 
-<ContentLayout frontmatter={entry?.data} />
+<PageLayout pageTitle={page.data.title} description={page.data.description}>
+  <article class="page-content homepage">
+    <Content />
+  </article>
+</PageLayout>

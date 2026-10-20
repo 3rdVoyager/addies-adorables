@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-body);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: var(--leading-normal);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-normal);
+}
+
+h1 {
+  color: var(--color-text-heading);
+  font-size: var(--text-3xl);
+  line-height: 1.05;
+}
+
+h2 {
+  color: var(--color-text-heading);
+  font-size: var(--text-2xl);
+  line-height: 1.15;
+}
+
+h3 {
+  color: var(--color-text-heading);
+  font-size: var(--text-xl);
+}
+
+h4 {
+  color: var(--color-text-heading);
+  font-size: var(--text-lg);
+}
+
+strong {
+  font-weight: 700;
+}
+
+p {
+  color: var(--color-text-body);
+  font-size: var(--text-base);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 90%;
+  }
+}
