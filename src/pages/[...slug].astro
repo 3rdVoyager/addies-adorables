@@ -25,7 +25,11 @@ if (!page) {
 const { Content } = await render(page);
 ---
 
-<PageLayout pageTitle={page.data.title} description={page.data.description}>
+<PageLayout
+  pageTitle={page.data.title}
+  description={page.data.description}
+  standalone={page.data.standalone}
+>
   <article class="page-content">
     <Content />
   </article>

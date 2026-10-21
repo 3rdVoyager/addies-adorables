@@ -1,56 +1,71 @@
 ---
 import headerData from "../data/header.json";
 
+interface Props {
+  standalone?: boolean;
+}
+
+const { standalone = false } = Astro.props;
 const { brand, navigation } = headerData;
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="site-header">
+<header class:list={["site-header", { "site-header--standalone": standalone }]}>
   <div class="site-header__bar">
     <a class="site-brand" href="/">
       <img class="brand-logo" src="/assets/uploads/images/logo.png" alt={brand.name} />
       <span class="brand-name">{brand.name}</span>
     </a>
 
-    <button
-      class="nav-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="main-nav"
-      aria-label="Open menu"
-    >
-      <span class="nav-toggle__bars" aria-hidden="true">
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-      </span>
-    </button>
-  </div>
-
-  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-    <ul>
-      {
-        navigation.navLinks.map((link) => (
-          <li aria-current={currentPath === link.href ? "page" : undefined}>
-            <a href={link.href}>{link.label}</a>
-          </li>
-        ))
-      }
-    </ul>
-    <div class="main-nav__ctas">
-      {
-        navigation.ctaLinks.map((cta) => (
-          <a class="header-cta" href={cta.href}>{cta.label}</a>
-        ))
-      }
-    </div>
-  </nav>
-
-  <div class="header-actions">
     {
-      navigation.ctaLinks.map((cta) => (
-        <a class="header-cta" href={cta.href}>{cta.label}</a>
-      ))
+      !standalone && (
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle__bars" aria-hidden="true">
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </span>
+        </button>
+      )
     }
   </div>
+
+  {
+    !standalone && (
+      <>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <ul>
+            {
+              navigation.navLinks.map((link) => (
+                <li aria-current={currentPath === link.href ? "page" : undefined}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="main-nav__ctas">
+            {
+              navigation.ctaLinks.map((cta) => (
+                <a class="header-cta" href={cta.href}>{cta.label}</a>
+              ))
+            }
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          {
+            navigation.ctaLinks.map((cta) => (
+              <a class="header-cta" href={cta.href}>{cta.label}</a>
+            ))
+          }
+        </div>
+      </>
+    )
+  }
 </header>

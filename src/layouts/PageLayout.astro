@@ -9,7 +9,7 @@ import '../styles/gallery.css';
 import '../styles/global.css';
 import '../styles/header.css';
 
-const { pageTitle, description } = Astro.props;
+const { pageTitle, description, standalone = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -30,7 +30,7 @@ const { pageTitle, description } = Astro.props;
 		<script src="/scripts/nav.js" defer></script>
 	</head>
 	<body>
-		<Header />
+		<Header standalone={standalone} />
 		<main>
 			<slot />
 		</main>

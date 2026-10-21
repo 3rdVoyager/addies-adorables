@@ -38,6 +38,11 @@ content:
         label: Page description
         type: text
         required: true
+      - name: standalone
+        label: Standalone page
+        type: boolean
+        default: false
+        description: When enabled, the header shows only the brand (no navigation or CTAs).
       - name: body
         label: Page content
         type: rich-text
