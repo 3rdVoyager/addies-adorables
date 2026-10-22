@@ -54,4 +54,3 @@ description: Handmade crafts, crocheted with care, made to bring a little more j
   <p>Addie started crocheting as a way to unwind after a long day. What began as a quiet hobby quickly turned into something more when friends started asking for their own little handmade friends. Addie's Adorables was born from a love of handmade gifts and the belief that a single, small crocheted friend can bring a lot of joy.</p>
   <p><a class="button-link" href="/about">Learn More</a></p>
 </div>
-
