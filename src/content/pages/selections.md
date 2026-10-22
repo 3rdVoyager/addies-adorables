@@ -62,7 +62,3 @@ standalone: true
     </article>
   </div>
 </div>
-
-
-
-

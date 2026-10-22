@@ -45,4 +45,3 @@ description: Browse handmade crochet adorables.
   </div>
 </div>
 
-

@@ -10,4 +10,3 @@ description: The perfect hat for a trip to the bathroom!
   <img class="img-medium" src="/assets/uploads/images/adorables/plunger-hat.webp" alt="Crochet Plunger Hat">
 </div>
 
-

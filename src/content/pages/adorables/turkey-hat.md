@@ -10,4 +10,3 @@ description: A hilarious hat in honor of a very large and important meal! $25.
   <img class="img-medium" src="/assets/uploads/images/adorables/turkey-hat.webp" alt="Crochet Turkey Hat">
 </div>
 
-
