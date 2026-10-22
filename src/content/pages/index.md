@@ -15,15 +15,15 @@ description: Handmade crafts, crocheted with care, made to bring a little more j
   <p>A few favorites to start with. Every item can be made in your colors.</p>
   <div class="card-grid">
     <article class="content-card">
-      <h3><a href="/adorables/crochet-bunny-plushie/">Crochet Bunny Plushie</a></h3>
+      <h3><a href="/adorables/bunny-plushie/">Crochet Bunny Plushie</a></h3>
       <p>The perfect little companion for any occasion!</p>
     </article>
     <article class="content-card">
-      <h3><a href="/adorables/crochet-rose-keychain/">Crochet Rose Keychain</a></h3>
+      <h3><a href="/adorables/rose-keychain/">Crochet Rose Keychain</a></h3>
       <p>A little decoration for any bag!</p>
     </article>
     <article class="content-card">
-      <h3><a href="/adorables/crochet-turkey-hat/">Crochet Turkey Hat</a></h3>
+      <h3><a href="/adorables/turkey-hat/">Crochet Turkey Hat</a></h3>
       <p>A hilarious hat in honor of a very large and important meal!</p>
     </article>
   </div>
@@ -54,3 +54,4 @@ description: Handmade crafts, crocheted with care, made to bring a little more j
   <p>Addie started crocheting as a way to unwind after a long day. What began as a quiet hobby quickly turned into something more when friends started asking for their own little handmade friends. Addie's Adorables was born from a love of handmade gifts and the belief that a single, small crocheted friend can bring a lot of joy.</p>
   <p><a class="button-link" href="/about">Learn More</a></p>
 </div>
+
