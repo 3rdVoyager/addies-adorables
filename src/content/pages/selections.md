@@ -57,6 +57,8 @@ standalone: true
       <h3>Crochet Turtles</h3>
       <p>Adorable little turtles for any nature lover!</p>
     </article>
+    <article class="content-centered">
+      <p>And so much more!</p>
+    </article>
   </div>
 </div>
-
