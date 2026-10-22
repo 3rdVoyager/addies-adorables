@@ -8,52 +8,52 @@ standalone: true
   <h1>Browse Adorables</h1>
   <div class="card-grid">
     <article class="content-card">
-      <img src="/assets/uploads/images/adorables/horse-portrait.webp" alt="Crochet Horse Keychain" loading="lazy">
+      <img src="/assets/uploads/images/adorables/horse-keychain.webp" alt="Crochet Horse Keychain" loading="lazy">
       <h3>Crochet Horse Keychain</h3>
       <p>A cute little companion to hang on any bag!</p>
     </article>
     <article class="content-card">
-      <img src="/assets/uploads/images/adorables/rose-landscape.webp" alt="Crochet Rose Keychain" loading="lazy">
+      <img src="/assets/uploads/images/adorables/rose-keychain.webp" alt="Crochet Rose Keychain" loading="lazy">
       <h3>Crochet Rose Keychain</h3>
       <p>A little decoration for any bag!</p>
     </article>
     <article class="content-card">
-    <img src="/assets/uploads/images/adorables/christmas-tree-hat-portrait.webp" alt="Crochet Christmas Tree Hat" loading="lazy">
+    <img src="/assets/uploads/images/adorables/christmas-tree-hat.webp" alt="Crochet Christmas Tree Hat" loading="lazy">
       <h3>Crochet Christmas Tree Hat</h3>
       <p>A festive hat for any holiday occasion!</p>
     </article>
     <article class="content-card">
-      <img src="/assets/uploads/images/adorables/turkey-hat-portrait.webp" alt="Crochet Turkey Hat" loading="lazy">
+      <img src="/assets/uploads/images/adorables/turkey-hat.webp" alt="Crochet Turkey Hat" loading="lazy">
       <h3>Crochet Turkey Hat</h3>
       <p>A hilarious hat in honor of a very large and important meal!</p>
     </article>
     <article class="content-card">
-      <img src="/assets/uploads/images/adorables/snowman-hat-portrait.webp" alt="Crochet Snowman Hat" loading="lazy">
+      <img src="/assets/uploads/images/adorables/snowman-hat.webp" alt="Crochet Snowman Hat" loading="lazy">
       <h3>Crochet Snowman Hat</h3>
       <p>A hat for those who love snow!</p>
     </article>
     <article class="content-card">
-      <img src="/assets/uploads/images/adorables/plunger-hat-portrait.webp" alt="Crochet Plunger Hat" loading="lazy">
+      <img src="/assets/uploads/images/adorables/plunger-hat.webp" alt="Crochet Plunger Hat" loading="lazy">
       <h3>Crochet Plunger Hat</h3>
       <p>The perfect hat for a trip to the bathroom!</p>
     </article>
     <article class="content-card">
-      <img src="/assets/uploads/images/adorables/yellow-tang-portrait.webp" alt="Crochet Yellow Tang" loading="lazy">
+      <img src="/assets/uploads/images/adorables/yellow-tang.webp" alt="Crochet Yellow Tang" loading="lazy">
       <h3>Crochet Yellow Tang</h3>
       <p>A cute little fish that can travel out of water!</p>
     </article>
     <article class="content-card">
-      <img src="/assets/uploads/images/adorables/bunny-square.webp" alt="Crochet Bunny Plushie" loading="lazy">
+      <img src="/assets/uploads/images/adorables/bunny-plushie.webp" alt="Crochet Bunny Plushie" loading="lazy">
       <h3>Crochet Bunny Plushie</h3>
       <p>The perfect little companion for any occasion!</p>
     </article>
     <article class="content-card">
-      <img src="/assets/uploads/images/adorables/hamster-square.webp" alt="Crochet Hamster Plushie" loading="lazy">
+      <img src="/assets/uploads/images/adorables/hamster-plushie.webp" alt="Crochet Hamster Plushie" loading="lazy">
       <h3>Crochet Hamster Plushie</h3>
       <p>A chubby plushie for any rodent lover!</p>
     </article>
     <article class="content-card">
-      <img src="/assets/uploads/images/adorables/turtles-portrait.webp" alt="Crochet Turtles" loading="lazy">
+      <img src="/assets/uploads/images/adorables/turtles.webp" alt="Crochet Turtles" loading="lazy">
       <h3>Crochet Turtles</h3>
       <p>Adorable little turtles for any nature lover!</p>
     </article>
@@ -62,3 +62,7 @@ standalone: true
     </article>
   </div>
 </div>
+
+
+
+
