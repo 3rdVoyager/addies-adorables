@@ -41,6 +41,12 @@
   margin-bottom: 0;
 }
 
+.content-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .home-hero {
   background-color: var(--color-bg);
   display: flex;
