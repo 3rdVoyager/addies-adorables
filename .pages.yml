@@ -4,19 +4,11 @@ media:
     input: public/assets/uploads/images
     output: /assets/uploads/images
     categories: [image]
-    extensions: [webp]
-  - name: documents
-    label: Documents
-    input: public/assets/uploads/documents
-    output: /assets/uploads/documents
-    categories: [document]
-    extensions: [pdf]
   - name: brand
     label: Brand assets
     input: public/assets/brand
     output: /assets/brand
     categories: [image]
-    extensions: [png, svg, ico, webp]
 
 content:
   - name: pages
