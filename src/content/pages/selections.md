@@ -53,7 +53,7 @@ standalone: true
       <p>A chubby plushie for any rodent lover!</p>
     </article>
     <article class="content-card">
-      <img src="/assets/uploads/images/adorables/crochet-turtles-portrait.webp" alt="Crochet Turtles" loading="lazy">
+      <img src="/assets/uploads/images/adorables/turtles-portrait.webp" alt="Crochet Turtles" loading="lazy">
       <h3>Crochet Turtles</h3>
       <p>Adorable little turtles for any nature lover!</p>
     </article>
