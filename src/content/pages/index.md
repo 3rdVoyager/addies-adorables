@@ -5,7 +5,7 @@ description: Handmade crafts, crocheted with care, made to bring a little more j
 
 <div class="page-section home-hero">
   <h1>Welcome to Addie's Adorables!</h1>
-  <img class="brand-logo" src="/assets/uploads/images/logo.png" alt="Addie's Adorables Logo">
+  <img class="brand-logo" src="/assets/brand/logo.png" alt="Addie's Adorables Logo">
   <p>Handmade crafts, crocheted with care, made to bring a little more joy.</p>
   <p><a class="button-link" href="/adorables">Browse Adorables</a> <a class="button-link" href="/get-an-adorable">Get an Adorable</a></p>
 </div>
