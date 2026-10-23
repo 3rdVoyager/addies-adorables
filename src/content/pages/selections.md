@@ -57,6 +57,11 @@ standalone: true
       <h3>Crochet Turtles</h3>
       <p>Adorable little turtles for any nature lover!</p>
     </article>
+    <article class="content-card">
+      <img src="/assets/uploads/images/adorables/hanging-plant.webp" alt="Crochet Hanging Plant" loading="lazy">
+      <h3>Crochet Hanging Plant</h3>
+      <p>A flowery little plant to hang anywhere, including your car!</p>
+    </article>
     <article class="content-centered">
       <p>And so much more!</p>
     </article>
