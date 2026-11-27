@@ -1,0 +1,41 @@
+---
+import Button from "./Button.astro";
+import Gallery from "./Gallery.astro";
+import Image from "./Image.astro";
+import Markdown from "./Markdown.astro";
+import type { ContentBlock } from "../content.config";
+
+const { block } = Astro.props as { block: Exclude<ContentBlock, { type: "block" }> };
+---
+
+{block.type === "text" && <Markdown text={block.text} />}
+
+{block.type === "image" && (
+  <Image
+    src={block.src}
+    alt={block.alt ?? ""}
+    size={block.size}
+    crop={block.crop}
+  />
+)}
+
+{block.type === "button" && (
+  <Button
+    href={block.href}
+    title={block.title}
+    variant={block.variant}
+  />
+)}
+
+{block.type === "gallery" && (
+  <Gallery
+    images={block.images}
+    size={block.size}
+    crop={block.crop}
+    controls={block.controls}
+    indicators={block.indicators}
+    autoScroll={block.autoScroll}
+    autoScrollInterval={block.autoScrollInterval}
+    pauseOnHover={block.pauseOnHover}
+  />
+)}

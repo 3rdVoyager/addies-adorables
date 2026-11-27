@@ -1,0 +1,27 @@
+---
+import "../styles/content-section.css";
+import ContentBlock from "./ContentBlock.astro";
+import type { ContentBlock as ContentBlockData, ContentSection as ContentSectionData } from "../content.config";
+
+const {
+  color = "cream",
+  layout = "auto",
+  blocks = [],
+  className = "",
+} = Astro.props as ContentSectionData & {
+  blocks?: ContentBlockData[];
+  className?: string;
+};
+---
+
+<section
+  class:list={[
+    "content-section",
+    `content-section--${color}`,
+    `content-layout--${layout}`,
+    className,
+  ]}
+>
+  {blocks.map((block) => <ContentBlock block={block} />)}
+  <slot />
+</section>

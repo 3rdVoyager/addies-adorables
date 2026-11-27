@@ -1,11 +1,13 @@
 ---
-title: Crochet Rose Keychain
-description: A little decoration for any bag! $5.
+title: "Crochet Rose Keychain"
+description: "A little decoration for any bag! $5."
+standalone: false
+sections:
+  - color: cream
+    blocks:
+      - type: text
+        text: |
+          <h1>Crochet Rose Keychain</h1>
+            <p>A little decoration for any bag! Customizable rose color!</p>
+            <img class="img-medium" src="/assets/uploads/images/adorables/rose-keychain.webp" alt="Crochet Rose Keychain">
 ---
-
-<div class="page-section">
-  <h1>Crochet Rose Keychain</h1>
-  <p>A little decoration for any bag! Customizable rose color!</p>
-  <img class="img-medium" src="/assets/uploads/images/adorables/rose-keychain.webp" alt="Crochet Rose Keychain">
-</div>
-

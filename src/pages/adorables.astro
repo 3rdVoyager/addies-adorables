@@ -37,7 +37,7 @@ const sections = owners
       <h1>Browse Adorables</h1>
 
       {sections.map((section) => (
-        <section class="adorable-section">
+        <section class:list={["adorable-section", `adorable-section--${section.directory}`]}>
           <h2>{section.heading}</h2>
           <div class="card-grid">
             {section.items.map((adorable) => (
@@ -54,3 +54,10 @@ const sections = owners
     </div>
   </article>
 </PageLayout>
+
+<style>
+  .adorable-section--katherine .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 24rem));
+    justify-content: start;
+  }
+</style>

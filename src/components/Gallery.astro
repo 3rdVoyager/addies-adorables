@@ -1,0 +1,28 @@
+---
+import Image from "./Image.astro";
+import "../styles/gallery.css";
+
+const {
+  images = [],
+  size = "large",
+  crop = "natural",
+  controls = true,
+  indicators = true,
+  autoScroll = false,
+  autoScrollInterval = 5000,
+  pauseOnHover = true,
+} = Astro.props;
+---
+
+<div
+  class:list={["gallery", `gallery--${size}`]}
+  data-gallery
+  data-crop={crop}
+  data-controls={controls}
+  data-indicators={indicators}
+  data-autoscroll={autoScroll}
+  data-interval={autoScrollInterval}
+  data-pause-on-hover={pauseOnHover}
+>
+  {images.map((src) => <Image src={src} alt="" size="full" crop={crop} />)}
+</div>

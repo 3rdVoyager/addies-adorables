@@ -1,0 +1,30 @@
+---
+import "../styles/content-block.css";
+import ContentBlockContent from "./ContentBlockContent.astro";
+import type { ContentBlock as ContentBlockData } from "../content.config";
+
+const { block, className = "" } = Astro.props as {
+  block: ContentBlockData;
+  className?: string;
+};
+
+const blockVariant = block.type === "block" ? block.variant ?? "default" : "default";
+const blockColor = block.type === "block" ? block.color ?? "transparent" : "transparent";
+const blockLayout = block.type === "block" ? block.layout ?? "1col" : "1col";
+---
+
+<div
+  class:list={[
+    "content-block",
+    `content-block--${blockVariant}`,
+    `content-block-color--${blockColor}`,
+    `content-layout--${blockLayout}`,
+    className,
+  ]}
+>
+  {
+    block.type === "block"
+      ? block.blocks?.map((nestedBlock) => <ContentBlock block={nestedBlock} />)
+      : <ContentBlockContent block={block} />
+  }
+</div>
