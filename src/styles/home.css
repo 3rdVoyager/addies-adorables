@@ -1,5 +1,12 @@
 .content-section--home-hero {
   border-bottom-width: 4px;
+  justify-items: center;
+  text-align: center;
+}
+
+.content-section--home-hero > .content-block {
+  width: 100%;
+  justify-items: center;
 }
 
 .content-section--home-hero .markdown {
@@ -10,8 +17,14 @@
 }
 
 .content-section--home-hero img {
+  justify-self: center;
   align-self: center;
   width: 20rem;
   height: auto;
   border-radius: 2rem;
+}
+
+.content-section--home-hero .button,
+.content-section--home-hero .button-link {
+  justify-self: center;
 }
