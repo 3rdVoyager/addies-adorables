@@ -7,7 +7,11 @@ sections:
     blocks:
       - type: text
         text: |
-          <h1>Crochet Christmas Tree Hat</h1>
-            <p>A festive hat for any holiday occasion!</p>
-            <img class="img-medium" src="/assets/uploads/images/adorables/christmas-tree-hat.webp" alt="Crochet Christmas Tree Hat">
+          # Crochet Christmas Tree Hat
+
+          A festive hat for any holiday occasion!
+      - type: image
+        src: /assets/uploads/images/adorables/christmas-tree-hat.webp
+        alt: "Crochet Christmas Tree Hat"
+        size: medium
 ---

@@ -24,7 +24,7 @@ const blockLayout = block.type === "block" ? block.layout ?? "1col" : "1col";
 >
   {
     block.type === "block"
-      ? block.blocks?.map((nestedBlock) => <ContentBlock block={nestedBlock} />)
+      ? block.blocks?.map((nestedBlock) => <Astro.self block={nestedBlock} />)
       : <ContentBlockContent block={block} />
   }
 </div>

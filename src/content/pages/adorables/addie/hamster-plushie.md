@@ -7,7 +7,11 @@ sections:
     blocks:
       - type: text
         text: |
-          <h1>Crochet Hamster Plushie</h1>
-            <p>A chubby plushie for any rodent lover! Customizable colors for the base color of the hamster!</p>
-            <img class="img-medium" src="/assets/uploads/images/adorables/hamster-plushie.webp" alt="Crochet Hamster Plushie">
+          # Crochet Hamster Plushie
+
+          A chubby plushie for any rodent lover! Customizable colors for the base color of the hamster!
+      - type: image
+        src: /assets/uploads/images/adorables/hamster-plushie.webp
+        alt: "Crochet Hamster Plushie"
+        size: medium
 ---
