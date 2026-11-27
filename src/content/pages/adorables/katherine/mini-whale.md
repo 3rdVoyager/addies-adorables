@@ -34,7 +34,7 @@ sections:
 
 
           *All measurements are in inches and may vary from each item because
-          each is handmade.*
+          they are handmade.*
 
 
           ### $5
