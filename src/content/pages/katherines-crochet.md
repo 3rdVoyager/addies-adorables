@@ -3,4 +3,4 @@ title: Katherine's Crochet
 description: Katherine's Crochet
 standalone: false
 ---
-<p></p>
+<img src="/assets/uploads/images/1000001477.jpeg"><p></p>
