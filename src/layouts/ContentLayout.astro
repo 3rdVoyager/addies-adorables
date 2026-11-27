@@ -1,0 +1,30 @@
+---
+import PageLayout from "./PageLayout.astro";
+import ContentSection from "../components/ContentSection.astro";
+import type { PageFrontmatter } from "../content.config";
+
+const {
+  frontmatter,
+  homeHero = false,
+} = Astro.props as {
+  frontmatter: PageFrontmatter;
+  homeHero?: boolean;
+};
+---
+
+<PageLayout
+  pageTitle={frontmatter.title}
+  description={frontmatter.description}
+  standalone={frontmatter.standalone}
+>
+  {
+    frontmatter.sections.map((section, index) => (
+      <ContentSection
+        color={section.color}
+        layout={section.layout}
+        blocks={section.blocks}
+        className={homeHero && index === 0 ? "content-section--home-hero" : ""}
+      />
+    ))
+  }
+</PageLayout>

@@ -1,0 +1,18 @@
+.markdown > :first-child {
+  margin-top: 0;
+}
+
+.markdown > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown a {
+  color: inherit;
+  font-weight: 700;
+  text-underline-offset: 0.15em;
+}
+
+.markdown ul,
+.markdown ol {
+  padding-left: var(--space-lg);
+}

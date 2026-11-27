@@ -10,6 +10,197 @@ media:
     output: /assets/brand
     categories: [image]
 
+components:
+  text:
+    type: object
+    label: Text
+    fields:
+      - name: text
+        label: Text
+        type: rich-text
+        required: true
+        options:
+          format: html
+          media: images
+          path: images
+          switcher: true
+
+  image:
+    type: object
+    label: Image
+    fields:
+      - name: src
+        label: Image file
+        type: image
+        required: true
+        options:
+          media: images
+      - name: alt
+        label: Accessibility text
+        type: string
+      - name: size
+        label: Display size
+        type: select
+        default: medium
+        options:
+          values: [small, medium, large, full]
+      - name: crop
+        label: Crop
+        type: select
+        default: natural
+        options:
+          values: [natural, landscape, square, portrait]
+
+  button:
+    type: object
+    label: Button
+    fields:
+      - name: title
+        label: Text
+        type: string
+        required: true
+      - name: href
+        label: Link
+        type: string
+        required: true
+      - name: variant
+        label: Style
+        type: select
+        default: primary
+        options:
+          values: [primary, secondary]
+
+  gallery:
+    type: object
+    label: Gallery
+    fields:
+      - name: images
+        label: Gallery images
+        type: image
+        options:
+          media: images
+          multiple:
+            max: 500
+          unique: true
+      - name: size
+        label: Gallery width
+        type: select
+        default: large
+        options:
+          values: [small, medium, large, full]
+      - name: crop
+        label: Image crop
+        type: select
+        default: natural
+        options:
+          values: [natural, landscape, square, portrait]
+      - name: controls
+        label: Show arrow controls
+        type: boolean
+        default: true
+      - name: indicators
+        label: Show slide indicators
+        type: boolean
+        default: true
+      - name: autoScroll
+        label: Auto-scroll
+        type: boolean
+        default: false
+      - name: autoScrollInterval
+        label: Auto-scroll interval
+        type: number
+        default: 5000
+      - name: pauseOnHover
+        label: Pause on hover
+        type: boolean
+        default: true
+
+  contentblock:
+    type: object
+    label: Content block
+    fields:
+      - name: color
+        label: Block color
+        type: select
+        default: transparent
+        options:
+          values: [navy, cream, white, slate, pink, transparent]
+      - name: variant
+        label: Block style
+        type: select
+        default: default
+        options:
+          values: [default, card]
+      - name: layout
+        label: Layout
+        type: select
+        default: 1col
+        options:
+          values: [auto, 1col, 2cols, 3cols, 4cols, 5cols]
+      - name: blocks
+        label: Nested content blocks
+        type: block
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Nested block {index}"
+        blockKey: type
+        blocks:
+          - name: text
+            label: Text block
+            component: text
+          - name: image
+            label: Image block
+            component: image
+          - name: button
+            label: Button block
+            component: button
+          - name: gallery
+            label: Gallery block
+            component: gallery
+
+  section:
+    type: object
+    label: Section
+    fields:
+      - name: color
+        label: Section color
+        type: select
+        required: true
+        default: cream
+        options:
+          values: [navy, cream, white, slate, pink]
+      - name: layout
+        label: Layout
+        type: select
+        default: auto
+        options:
+          values: [auto, 1col, 2cols, 3cols, 4cols, 5cols]
+      - name: blocks
+        label: Content blocks
+        type: block
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Block {index}"
+        blockKey: type
+        blocks:
+          - name: text
+            label: Text block
+            component: text
+          - name: image
+            label: Image block
+            component: image
+          - name: button
+            label: Button block
+            component: button
+          - name: gallery
+            label: Gallery block
+            component: gallery
+          - name: block
+            label: Nested content block
+            component: contentblock
+
 content:
   - name: pages
     label: Pages
@@ -17,7 +208,7 @@ content:
     path: src/content/pages
     subfolders: true
     format: yaml-frontmatter
-    filename: "{primary}.md"
+    filename: "{fields.title}.md"
     view:
       primary: title
       fields: [title]
@@ -29,20 +220,17 @@ content:
       - name: description
         label: Page description
         type: text
-        required: true
       - name: standalone
         label: Standalone page
         type: boolean
         default: false
-        description: When enabled, the header shows only the brand (no navigation or CTAs).
-      - name: body
-        label: Page content
-        type: rich-text
-        options:
-          format: html
-          media: images
-          path: images
-          switcher: true
+      - name: sections
+        label: Page sections
+        component: section
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.color} section"
 
   - name: header
     label: Header
@@ -61,7 +249,6 @@ content:
             label: Brand mark
             type: string
             required: true
-            description: A short symbol displayed beside the brand name.
       - name: navigation
         label: Navigation
         type: object

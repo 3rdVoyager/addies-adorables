@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+
+const owners = [
+  { directory: 'addie', heading: "Addie's Adorables" },
+  { directory: 'katherine', heading: "Katherine's Adorables" },
+];
+
+const adorables = await getCollection('pages', (entry) => {
+  const [collectionDirectory, ownerDirectory, itemSlug] = entry.id.split('/');
+
+  return (
+    collectionDirectory === 'adorables' &&
+    Boolean(ownerDirectory) &&
+    Boolean(itemSlug) &&
+    owners.some((owner) => owner.directory === ownerDirectory)
+  );
+});
+
+const sections = owners
+  .map((owner) => ({
+    ...owner,
+    items: adorables
+      .filter((adorable) => adorable.id.split('/')[1] === owner.directory)
+      .sort((first, second) => first.data.title.localeCompare(second.data.title)),
+  }))
+  .filter((section) => section.items.length > 0);
+---
+
+<PageLayout
+  pageTitle="Adorables"
+  description="Browse handmade crochet adorables."
+>
+  <article class="page-content">
+    <div class="page-section">
+      <h1>Browse Adorables</h1>
+
+      {sections.map((section) => (
+        <section class:list={["adorable-section", `adorable-section--${section.directory}`]}>
+          <h2>{section.heading}</h2>
+          <div class="card-grid">
+            {section.items.map((adorable) => (
+              <article class="content-card">
+                <h3>
+                  <a href={`/${adorable.id}/`}>{adorable.data.title}</a>
+                </h3>
+                <p>{adorable.data.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </article>
+</PageLayout>
+
+<style>
+  .adorable-section--katherine .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 24rem));
+    justify-content: start;
+  }
+</style>
