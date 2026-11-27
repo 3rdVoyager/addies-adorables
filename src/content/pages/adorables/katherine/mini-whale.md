@@ -21,14 +21,21 @@ sections:
             alt: "Color: Light Pink"
             size: medium
             crop: natural
+          - type: image
+            src: /assets/uploads/images/1000001485.jpeg
+            size: medium
+            crop: natural
       - type: text
-        text: |
-          **Color**: Berry
+        text: >+
+          **Color Choices**: Berry, Purple, Light Pink, Pale Pink, Blue, Mint,
+          Furry Purple, Furry White  
+
           **Size**: L: ~2.75 W: ~2.75 H: ~1.5
 
-          *All measurements are in inches and may vary from each item because each is handmade.*
+
+          *All measurements are in inches and may vary from each item because
+          each is handmade.*
+
 
           ### $5
-
-          Color Choices:
 ---
