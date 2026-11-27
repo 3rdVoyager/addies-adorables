@@ -7,9 +7,13 @@ sections:
     blocks:
       - type: text
         text: |
-          <h1>Crochet Snowman Hat</h1>
-            <p>A hat for those who love snow!</p>
-            <p>Customizable hat and scarf colors!</p>
+          # Crochet Snowman Hat
 
-            <img class="img-medium" src="/assets/uploads/images/adorables/snowman-hat.webp" alt="Crochet Snowman Hat">
+          A hat for those who love snow!
+
+          Customizable hat and scarf colors!
+      - type: image
+        src: /assets/uploads/images/adorables/snowman-hat.webp
+        alt: "Crochet Snowman Hat"
+        size: medium
 ---

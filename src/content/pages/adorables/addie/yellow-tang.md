@@ -7,8 +7,11 @@ sections:
     blocks:
       - type: text
         text: |
-          <h1>Crochet Yellow Tang</h1>
-            <p>A cute little fish that can travel out of water!</p>
+          # Crochet Yellow Tang
 
-            <img class="img-medium" src="/assets/uploads/images/adorables/yellow-tang.webp" alt="Crochet Yellow Tang">
+          A cute little fish that can travel out of water!
+      - type: image
+        src: /assets/uploads/images/adorables/yellow-tang.webp
+        alt: "Crochet Yellow Tang"
+        size: medium
 ---

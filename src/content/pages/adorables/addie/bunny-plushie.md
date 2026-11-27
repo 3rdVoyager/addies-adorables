@@ -7,5 +7,11 @@ sections:
     blocks:
       - type: text
         text: |
-          <h1>Crochet Bunny Plushie</h1><p>The perfect little companion for any occasion! Customizable bow and heart colors!</p><p>$15</p><img src="/assets/uploads/images/adorables/bunny-plushie.webp" alt="Crochet Bunny Plushie"><p></p>
+          # Crochet Bunny Plushie
+          The perfect little companion for any occasion! Customizable bow and heart colors!
+          $15
+      - type: image
+        src: /assets/uploads/images/adorables/bunny-plushie.webp
+        alt: "Crochet Bunny Plushie"
+        size: medium
 ---

@@ -7,8 +7,11 @@ sections:
     blocks:
       - type: text
         text: |
-          <h1>Crochet Plunger Hat</h1>
-            <p>The perfect hat for a trip to the bathroom!</p>
+          # Crochet Plunger Hat
 
-            <img class="img-medium" src="/assets/uploads/images/adorables/plunger-hat.webp" alt="Crochet Plunger Hat">
+          The perfect hat for a trip to the bathroom!
+      - type: image
+        src: /assets/uploads/images/adorables/plunger-hat.webp
+        alt: "Crochet Plunger Hat"
+        size: medium
 ---
