@@ -20,7 +20,6 @@ components:
         type: rich-text
         required: true
         options:
-          format: html
           media: images
           path: images
           switcher: true
